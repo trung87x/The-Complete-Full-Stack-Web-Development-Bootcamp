@@ -1,3 +1,7 @@
+// ==========================
+// Introduction to Numbers and Operators
+// ==========================
+
 // ===== Kiểu dữ liệu số =====
 const myInt = 5;            // Số nguyên
 const myFloat = 6.667;      // Số thập phân

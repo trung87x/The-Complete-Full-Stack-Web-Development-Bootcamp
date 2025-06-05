@@ -1,4 +1,7 @@
-// Các ví dụ về mảng trong JavaScript
+// ==========================
+// Introduction to Arrays
+// ==========================
+
 
 // Tạo mảng lưu danh sách mua sắm
 const shopping = ["bread", "milk", "cheese", "hummus", "noodles"];

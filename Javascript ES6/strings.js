@@ -1,4 +1,6 @@
-// Các ví dụ cơ bản về xử lý chuỗi trong JavaScript
+// ==========================
+// Introduction to Strings
+// ==========================
 
 // Khai báo chuỗi với dấu nháy đôi
 const string = "The revolution will not be televised.";
