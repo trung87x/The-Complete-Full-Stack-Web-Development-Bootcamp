@@ -37,7 +37,7 @@ function sayHello() {
 
 // 7. SyntaxError - lỗi chuỗi xuống dòng
 // console.log("Xin chao
-ban"); // ❌ lỗi xuống dòng trong chuỗi
+// ban"); // ❌ lỗi xuống dòng trong chuỗi
 console.log("Xin chao\nban"); // ✅ dùng \n để xuống dòng hợp lệ
 
 // 8. Kiểm tra phần tử DOM không tồn tại
