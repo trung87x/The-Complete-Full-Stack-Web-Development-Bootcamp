@@ -4,5 +4,3 @@
 
 
 // edit git -1
-
-// update mới nhất
