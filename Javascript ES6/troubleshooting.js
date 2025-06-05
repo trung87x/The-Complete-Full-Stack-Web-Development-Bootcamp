@@ -56,5 +56,3 @@ function checkGuess() {
 
 // 10. Gợi ý: Khi gặp lỗi → mở console → đọc dòng lỗi → tra cứu trên MDN nếu cần
 
-
-
