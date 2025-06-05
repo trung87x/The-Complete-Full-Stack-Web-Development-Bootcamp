@@ -1,5 +1,6 @@
-// == BIẾN TRONG JAVASCRIPT ==
-// Các khái niệm cơ bản về biến, let, const, kiểu dữ liệu, và quy tắc đặt tên
+// ==========================
+// Introduction to Variables
+// ==========================
 
 // 1. KHAI BÁO BIẾN
 // let myName;        // Khai báo biến chưa có giá trị -> undefined

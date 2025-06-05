@@ -1,3 +1,7 @@
+// ==========================
+// Introduction to Troubleshooting
+// ==========================
+
 // 1. Syntax Error - sai tên hàm (addeventListener)
 const guessSubmit = document.querySelector(".guessSubmit");
 guessSubmit.addEventListener("click", checkGuess); // ✅ sửa đúng tên hàm
@@ -55,4 +59,3 @@ function checkGuess() {
 }
 
 // 10. Gợi ý: Khi gặp lỗi → mở console → đọc dòng lỗi → tra cứu trên MDN nếu cần
-

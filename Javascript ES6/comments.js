@@ -1,3 +1,7 @@
+// ==========================
+// Introduction to Comments
+// ==========================
+
 // Function: creates a new paragraph and appends it to the bottom of the HTML body.
 
 function createParagraph() {

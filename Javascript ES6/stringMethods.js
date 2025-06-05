@@ -1,4 +1,6 @@
-// Tổng hợp các phương thức chuỗi thông dụng trong JavaScript
+// ==========================
+// Introduction to String Methods
+// ==========================
 
 // 1. Độ dài của chuỗi
 const browserType = "mozilla";
