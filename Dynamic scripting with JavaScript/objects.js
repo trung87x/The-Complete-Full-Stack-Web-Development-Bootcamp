@@ -1,3 +1,7 @@
+// ==========================
+// Introduction to objects
+// ==========================
+
 // 1. Tạo object rỗng
 const person = {};
 

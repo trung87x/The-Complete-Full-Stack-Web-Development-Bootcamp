@@ -1,3 +1,7 @@
+// ==========================
+// Introduction to DOM
+// ==========================
+
 // 1. Truy cập phần tử DOM
 const link = document.querySelector("a");
 link.textContent = "Mozilla Developer Network";

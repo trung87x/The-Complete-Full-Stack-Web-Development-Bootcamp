@@ -1,3 +1,7 @@
+// ==========================
+// Introduction to JSON
+// ==========================
+
 // 1. Lấy dữ liệu JSON và hiển thị ra trang web
 async function populate() {
   const requestURL =
