@@ -1,3 +1,7 @@
+// ==========================
+// Introduction to event bubbling
+// ==========================
+
 // 1. Gán sự kiện vào phần tử cha
 const output = document.querySelector("#output");
 const container = document.querySelector("#container");

@@ -1,3 +1,7 @@
+// ==========================
+// Introduction to debugging and error handling
+// ==========================
+
 // 1. Ví dụ lỗi thường gặp khi dùng fetch mà không chờ Promise
 const requestURL =
   "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";

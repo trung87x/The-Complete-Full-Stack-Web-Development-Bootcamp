@@ -1,3 +1,7 @@
+// ==========================
+// Introduction to network requests
+// ==========================
+
 // 1. Fetch nội dung văn bản đơn giản
 const verseChoose = document.querySelector("select");
 const poemDisplay = document.querySelector("pre");
