@@ -1,0 +1,73 @@
+DUYỆT WEB VÀ TÌM KIẾM THÔNG TIN TRÊN INTERNET
+=============================================
+
+1. CÁC KHÁI NIỆM CƠ BẢN
+------------------------
+- Web page: Trang web (file HTML), hiển thị được trên trình duyệt.
+- Website: Tập hợp nhiều web page, có cùng tên miền.
+- Web server: Máy chủ lưu trữ website.
+- Web service: Dịch vụ web như đăng nhập, dự báo thời tiết, xử lý ảnh...
+- Search engine: Công cụ tìm kiếm như Google, Bing, DuckDuckGo.
+
+So sánh với thư viện:
+- Web server = thư viện
+- Website = khu sách (khoa học, lịch sử...)
+- Web page = quyển sách
+- Search engine = mục lục thư viện
+
+2. PHÂN BIỆT TRÌNH DUYỆT VÀ CÔNG CỤ TÌM KIẾM
+--------------------------------------------
+- Trình duyệt (browser): Phần mềm như Chrome, Firefox, Safari... dùng để xem web.
+- Công cụ tìm kiếm (search engine): Website giúp tìm nội dung web (Google, Bing...)
+
+Lưu ý: Nhiều người nhầm lẫn vì khi mở trình duyệt sẽ thấy ô tìm kiếm của Google, nhưng đây là 2 thứ khác nhau.
+
+3. CÁCH WEB HOẠT ĐỘNG (GIẢN LƯỢC)
+----------------------------------
+Khi bạn gõ địa chỉ vào trình duyệt:
+1. Trình duyệt gửi yêu cầu HTTP đến web server.
+2. Server phản hồi bằng nội dung (HTML, ảnh, CSS...).
+3. Trình duyệt nhận, phân tích và hiển thị.
+
+Một trang web thường là:
+- index.html (trang chính)
+- Các tài nguyên kèm theo: ảnh, file CSS, JS...
+
+4. CÁCH TÌM KIẾM THÔNG TIN HIỆU QUẢ
+------------------------------------
+- Tìm kiến thức chung: dùng MDN hoặc Google.
+  Ví dụ: tìm "box model", "fetch()", "video element" trên MDN.
+- Tìm cách giải bài toán cụ thể: dùng StackOverflow.
+  Ví dụ: "javascript fibonacci sequence", "check prime number JS".
+
+5. SỬ DỤNG TRÍ TUỆ NHÂN TẠO (AI) HỖ TRỢ
+----------------------------------------
+Các công cụ AI như:
+- ChatGPT
+- Google Gemini
+- Microsoft Copilot
+
+Có thể giúp:
+- Tìm lỗi trong code
+- Viết lại code cho tối ưu hơn
+- Giải thích thuật toán
+- Gợi ý hướng xử lý vấn đề
+
+⚠️ Lưu ý khi dùng AI:
+- Cần hiểu nội dung mình làm, không nên ỷ lại hoàn toàn.
+- AI có thể trả lời sai, không cập nhật thông tin mới nhất.
+- Luôn kiểm tra lại kết quả trước khi tin tưởng.
+
+6. MẸO TÌM KIẾM TỐT HƠN
+------------------------
+- Luôn ghi rõ ngôn ngữ khi tìm (vd: "fibonacci javascript").
+- Lưu lại những câu trả lời hay (bookmark hoặc copy).
+- Dán lỗi cụ thể vào tìm kiếm để tìm hướng giải quyết.
+- Ưu tiên dùng trang uy tín: MDN, StackOverflow...
+
+Một số kỹ thuật nâng cao:
+- "ant fish cheese": tìm đúng cụm từ.
+- "ant cheese" -fish: có ant hoặc cheese, không có fish.
+- ant OR cheese: tìm ant hoặc cheese.
+- intitle:cheese: tìm trang có chữ "cheese" trong tiêu đề.
+

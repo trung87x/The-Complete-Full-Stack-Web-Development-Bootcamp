@@ -1,0 +1,64 @@
+CÀI ĐẶT PHẦN MỀM CƠ BẢN CHO PHÁT TRIỂN WEB
+=========================================
+
+1. CODE EDITOR – VISUAL STUDIO CODE
+-----------------------------------
+- Dùng để viết mã HTML, CSS, JavaScript.
+- Gọn nhẹ, mạnh mẽ, hỗ trợ nhiều tiện ích mở rộng.
+
+Cách cài:
+1. Vào https://code.visualstudio.com để tải và cài đặt.
+2. Mở VS Code, vào menu View > Extensions.
+3. Tìm "Live Preview" và cài đặt.
+
+Cách dùng Live Preview:
+- Mở file .html.
+- Nhấn nút "Show Preview" để xem trang chạy trực tiếp trong VS Code.
+
+2. TRÌNH DUYỆT KIỂM THỬ WEB
+----------------------------
+Cài ít nhất 1 trình duyệt từ mỗi nhóm sau:
+
+- Chromium: Chrome, Edge, Brave, Opera, Vivaldi.
+- Gecko: Firefox.
+- WebKit: Safari (chỉ có trên macOS/iOS).
+
+=> Dùng để test website trên nhiều nền tảng khác nhau.
+
+3. MÁY CHỦ CỤC BỘ (LOCAL SERVER)
+--------------------------------
+- Cần thiết để chạy web như thật (một số chức năng như API không chạy được nếu mở file trực tiếp).
+- Dùng Live Preview là cách đơn giản nhất để tạo local server trong VS Code.
+
+4. CÔNG CỤ XỬ LÝ HÌNH ẢNH
+--------------------------
+Mục đích: Nén, cắt, resize ảnh để đưa lên web.
+
+Gợi ý:
+- https://tinypng.com: Nén ảnh online.
+- Preview (macOS): Resize, crop ảnh.
+- Photos App (Windows): Dùng để chỉnh ảnh cơ bản.
+- GIMP, Canva, Paint.NET: Miễn phí, mạnh mẽ hơn nếu cần.
+
+5. GIT – QUẢN LÝ MÃ NGUỒN
+--------------------------
+- Dùng để lưu lịch sử mã nguồn, làm việc nhóm, đồng bộ với GitHub/GitLab.
+- Chưa cần dùng ngay – sẽ học sau ở phần Version Control.
+
+6. XUẤT BẢN WEBSITE
+--------------------
+- Khi hoàn thành website, bạn có thể xuất bản lên Internet bằng các cách:
+  + GitHub Pages
+  + Netlify
+  + Glitch
+  + CodePen
+
+=> Sẽ được học trong phần "Your first website".
+
+TỔNG KẾT NGẮN GỌN
+------------------
+- VS Code + Live Preview: Viết và chạy thử web tại chỗ.
+- Nên test trên nhiều trình duyệt khác nhau.
+- Tinypng + GIMP: Nén và chỉnh sửa ảnh miễn phí.
+- Git: Dùng sau để quản lý mã nguồn.
+- Xuất bản website: Sẽ học ở phần nâng cao.

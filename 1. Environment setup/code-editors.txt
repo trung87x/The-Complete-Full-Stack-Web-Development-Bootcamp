@@ -1,0 +1,81 @@
+TRÌNH SOẠN THẢO MÃ NGUỒN (CODE EDITORS)
+========================================
+
+1. TẠI SAO KHÔNG DÙNG WORD HOẶC TEXT EDITOR MẶC ĐỊNH?
+------------------------------------------------------
+- Microsoft Word là trình soạn thảo dạng nhị phân, không thích hợp viết code.
+- Text Editor mặc định như Notepad (Windows), TextEdit (macOS) chỉ hỗ trợ cơ bản.
+
+=> Nên dùng trình chuyên viết mã (code editor) như:
+  - Visual Studio Code (miễn phí, đa nền tảng)
+  - Notepad++ (Windows)
+  - Sublime Text (mất phí)
+  - IDE (chuyên sâu hơn): WebStorm, NetBeans...
+
+Khuyên dùng: Visual Studio Code (VS Code)
+
+2. CHỨC NĂNG CƠ BẢN CỦA CODE EDITOR
+-------------------------------------
+a. Mở và chỉnh sửa file mã nguồn
+- VS Code hỗ trợ mở đa loại file (html, css, js…)
+- Có thể đặt VS Code làm mặc định mở file `.html`, `.js`, `.css`,...
+
+b. Tô màu cú pháp (Syntax Highlighting)
+- Giúp đọc code dễ hơn.
+- Hiển thị khối mã, dấu `{}`, `()`, `[]` rõ ràng.
+
+  Ví dụ code:
+  function createGreeting(name) {
+    const greeting = `Hello, ${name}!`;
+    return greeting;
+  }
+
+c. Gợi ý code (Code Completion)
+- Khi gõ `function`, VS Code sẽ đề xuất cú pháp chuẩn.
+- Khi gõ `document.`, VS Code gợi ý các phương thức của đối tượng document.
+
+d. Kiểm lỗi cơ bản (Debugging Help)
+- Báo lỗi như:
+  + Sai tên biến (`Name` vs `name`)
+  + Thiếu dấu `"` hoặc dấu `)`
+  + Gạch đỏ, dấu chấm, cảnh báo...
+
+e. Tìm kiếm & thay thế (Search & Replace)
+- Edit > Find hoặc Edit > Replace
+- Có thể tìm toàn bộ file và thay thế hàng loạt.
+
+3. CÀI ĐẶT EXTENSION CHO VS CODE
+---------------------------------
+a. Mở Extension Panel:
+- View > Extensions
+
+b. Tìm kiếm extension:
+- Gõ “JavaScript” để xem các extension JS gợi ý.
+- Gõ “Prettier” → Cài **Prettier - Code formatter**
+
+c. Bật định dạng tự động với Prettier:
+- Mở Settings (File > Preferences > Settings)
+- Tìm “formatter” trong ô tìm kiếm.
+- Đặt:
+  + Editor: Default Formatter → Prettier - Code formatter
+  + Bật “Format On Save”
+
+d. Thử Prettier:
+- Tạo file test.js
+- Dán vào:
+  function sayHello(name){const greeting = `Hello, ${name}!`; return greeting;}
+- Nhấn Save → Code sẽ được format đẹp tự động thành:
+  function sayHello(name) {
+    const greeting = `Hello, ${name}!`;
+    return greeting;
+  }
+
+4. CÁC EXTENSION KHÁC CÓ THỂ THÊM VÀO
+---------------------------------------
+- Gợi ý code, lint, debug cho ngôn ngữ khác.
+- Giao diện đẹp hơn, thêm chủ đề màu.
+- Tích hợp Git, chạy server local.
+- Gợi ý đoạn mã tự động (AI-based).
+
+Lưu ý: Các extension giúp bạn tiện hơn, nhưng hãy hiểu rõ code trước khi dùng nhiều tự động hóa.
+
