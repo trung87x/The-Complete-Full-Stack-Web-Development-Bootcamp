@@ -1,0 +1,96 @@
+QUẢN LÝ FILE VÀ THƯ MỤC TRONG DỰ ÁN WEB
+========================================
+
+1. MỤC TIÊU
+------------
+- Biết cách tạo và sắp xếp file/thư mục trong máy tính.
+- Tổ chức đúng cấu trúc thư mục cho website.
+- Đặt tên file hợp lý, không gây lỗi.
+- Dùng VS Code để quản lý file dễ dàng hơn.
+- Hiểu cách viết đường dẫn (file path) đúng chuẩn.
+
+2. NƠI LƯU FILE DỰ ÁN
+----------------------
+- Luôn làm việc trong thư mục cá nhân (Home).
+- Nên tạo trong Documents → thư mục riêng như: web-projects
+- KHÔNG chỉnh file hệ thống để tránh lỗi hệ điều hành.
+
+3. TẠO THƯ MỤC DỰ ÁN
+---------------------
+- Tạo thư mục tên: web-projects
+  + Windows: Ctrl + Shift + N
+  + macOS: Cmd + Shift + N
+
+- Mở VS Code → File > Open Folder → chọn web-projects
+
+4. TẠO FILE TRONG VS CODE
+---------------------------
+- Trong EXPLORER pane:
+  + Nhấn nút "New File" → đặt tên: index.html
+
+- Có thể tạo thêm folder con:
+  + Tên: test-site
+  + Kéo thả file vào thư mục đó hoặc dùng:
+    - Windows: Ctrl + X → Ctrl + V
+    - macOS: Cmd + X → Cmd + V
+
+5. CẤU TRÚC WEBSITE CƠ BẢN
+----------------------------
+test-site/
+├── index.html
+├── images/
+├── styles/
+└── scripts/
+
+- index.html: trang chính
+- images: chứa ảnh
+- styles: chứa CSS
+- scripts: chứa JavaScript
+
+6. ĐẶT TÊN FILE ĐÚNG CÁCH
+---------------------------
+- Dùng chữ thường, không dấu, không khoảng trắng.
+- Dùng dấu gạch ngang để phân tách: ví dụ `my-file.html`
+- Tránh dùng ký tự lạ: @#$%^&*...
+- Không đổi đuôi file (.html, .jpg...) nếu không cần.
+
+7. HIỂN THỊ PHẦN MỞ RỘNG FILE (WINDOWS)
+----------------------------------------
+- Mở File Explorer → Folder options...
+- Bỏ chọn "Hide extensions for known file types" → OK
+
+8. ĐƯỜNG DẪN FILE (FILE PATH)
+------------------------------
+- Trong HTML muốn chèn ảnh:
+  <img src="images/firefox-icon.png" alt="My test image" />
+
+- Quy tắc:
+  + File cùng thư mục:                src="tên-file.jpg"
+  + Trong thư mục con:               src="images/tên-file.jpg"
+  + Lùi 1 cấp thư mục:               src="../tên-file.jpg"
+  + Lùi nhiều cấp rồi đi tới:        src="../../sub/folder/file.png"
+
+9. THỰC HÀNH HIỂN THỊ ẢNH
+--------------------------
+- Tải 1 hình ảnh, đặt tên gọn như: firefox-icon.png
+- Đặt trong thư mục: test-site/images
+- Mở index.html và thêm đoạn:
+  <!doctype html>
+  <html lang="en-US">
+    <head>
+      <meta charset="utf-8" />
+      <title>My test page</title>
+    </head>
+    <body>
+      <img src="images/firefox-icon.png" alt="My test image" />
+    </body>
+  </html>
+
+- Mở file index.html trong trình duyệt để xem kết quả.
+
+10. KẾT LUẬN NGẮN GỌN
+-----------------------
+- Luôn tổ chức thư mục website rõ ràng.
+- Tránh đặt tên file sai quy tắc (viết hoa, có dấu cách, ký tự lạ).
+- Dùng VS Code để tạo, chỉnh sửa và quản lý file dễ dàng.
+- Nắm vững cách viết đường dẫn để kết nối file trong dự án.
