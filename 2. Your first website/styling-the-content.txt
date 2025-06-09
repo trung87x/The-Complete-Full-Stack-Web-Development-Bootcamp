@@ -1,0 +1,119 @@
+TRANG TRÍ NỘI DUNG VỚI CSS
+=============================
+
+1. CSS LÀ GÌ?
+---------------
+- CSS (Cascading Style Sheets) là ngôn ngữ dùng để **trang trí và định dạng giao diện** cho trang web.
+- HTML tạo cấu trúc, còn CSS làm cho trang web đẹp hơn: đổi màu, font chữ, căn giữa, thêm đường viền...
+
+Ví dụ:
+<p>Hướng dẫn cuộc sống:</p>
+<ul>
+  <li>Ăn</li>
+  <li>Ngủ</li>
+  <li>Lặp lại</li>
+</ul>
+
+→ Dùng CSS có thể làm chữ màu đỏ, viền màu đen, nền màu vàng...
+
+2. CÁCH ÁP DỤNG CSS VÀO HTML
+------------------------------
+a. Tạo thư mục mới tên là `styles/`  
+b. Tạo file `style.css`, ví dụ:
+   p {
+     color: red;
+   }
+
+c. Trong file `index.html`, thêm vào trong thẻ <head>:
+   <link href="styles/style.css" rel="stylesheet" />
+
+→ Mở file HTML trong trình duyệt: nếu chữ màu đỏ → CSS hoạt động thành công!
+
+3. CẤU TRÚC CƠ BẢN CỦA CSS
+----------------------------
+- Selector: chọn phần tử cần chỉnh (ví dụ: p, h1, .class, #id)
+- Declaration: phần trong dấu {} gồm các dòng thuộc_tính: giá_trị;
+- Ví dụ:
+   p {
+     color: red;
+     width: 500px;
+     border: 1px solid black;
+   }
+
+→ Dấu : chia thuộc tính và giá trị, dấu ; kết thúc từng dòng.
+
+4. CẢI THIỆN GIAO DIỆN VĂN BẢN
+-------------------------------
+a. Chèn font chữ từ Google Fonts vào <head>:
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+b. Trong style.css:
+   html {
+     font-size: 10px;
+     font-family: "Roboto", sans-serif;
+   }
+
+c. Định dạng tiêu đề và văn bản:
+   h1 {
+     font-size: 60px;
+     text-align: center;
+   }
+
+   p,
+   li {
+     font-size: 16px;
+     line-height: 2;
+     letter-spacing: 1px;
+   }
+
+5. HIỂU VỀ HỘP (BOX MODEL)
+----------------------------
+Mọi phần tử HTML đều như một cái hộp gồm:
+- padding: khoảng cách bên trong
+- border: viền ngoài
+- margin: khoảng cách bên ngoài
+
+→ Bạn có thể chỉnh màu nền, độ rộng, đổ bóng, cách căn vị trí...
+
+6. MÀU NỀN TRANG
+------------------
+html {
+  background-color: #00539f;
+}
+
+→ Màu nền tổng thể cho toàn bộ trang
+
+7. ĐỊNH DẠNG THẺ <body>
+----------------------------
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #ff9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+→ Giúp phần nội dung giữa trang, có màu nền cam, viền đen
+
+8. TRANG TRÍ TIÊU ĐỀ CHÍNH
+----------------------------
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #00539f;
+  text-shadow: 3px 3px 1px black;
+}
+
+→ Xóa khoảng trắng dư, đổ bóng chữ, làm nổi bật tiêu đề
+
+9. CĂN GIỮA HÌNH ẢNH
+----------------------
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+→ Giúp ảnh nằm giữa, không bị tràn ra ngoài khi ảnh quá lớn

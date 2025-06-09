@@ -1,0 +1,104 @@
+MÔ HÌNH TIÊU CHUẨN WEB
+======================
+
+1. LỊCH SỬ VÀ SỰ HÌNH THÀNH CỦA WEB
+------------------------------------
+- Cuối thập niên 1960, mạng ARPANET của quân đội Mỹ ra đời, đặt nền móng cho Internet.
+- Năm 1980, Tim Berners-Lee tạo chương trình ENQUIRE với ý tưởng liên kết giữa các nút thông tin.
+- Năm 1989, Tim đề xuất hệ thống siêu văn bản toàn cầu và đến 1990 đã tạo:
+  + HTTP, HTML
+  + Trình duyệt đầu tiên: WorldWideWeb
+  + Web server và vài trang đầu tiên
+
+Lưu ý: Internet là hạ tầng (giao thức, đường truyền), còn Web là hệ thống chạy trên đó (HTML, HTTP, v.v).
+
+- Năm 1994, Tim thành lập W3C để chuẩn hóa HTML, HTTP và tạo CSS, JavaScript.
+- Sau đó, Web bùng nổ: nhiều trình duyệt, trang web, tổ chức tiêu chuẩn ra đời.
+
+2. TIÊU CHUẨN WEB LÀ GÌ?
+--------------------------
+- Là các công nghệ dùng để xây dựng trang web.
+- Được viết dưới dạng tài liệu kỹ thuật (specification), dành cho kỹ sư trình duyệt, không phải tài liệu học.
+
+3. CÁC TỔ CHỨC VÀ QUY TRÌNH TIÊU CHUẨN
+----------------------------------------
+Các tổ chức tiêu chuẩn tập hợp kỹ sư từ nhiều công ty để thống nhất cách công nghệ nên hoạt động.
+
+Một số tổ chức chính:
+- **W3C**: tổ chức chính tạo chuẩn web.
+- **WHATWG**: duy trì tiêu chuẩn HTML sống.
+- **TC39** (ECMA): phát triển ECMAScript (nền tảng của JavaScript).
+- **Khronos Group**: chuẩn đồ họa WebGL...
+
+Quy trình tạo chuẩn thường gồm:
+1. Ai đó (lập trình viên, kỹ sư...) đề xuất tính năng mới qua tài liệu giải thích và demo.
+2. Tính năng được thảo luận trong nhóm công tác (Working Group), ví dụ nhóm CSS.
+3. Một hoặc nhiều trình duyệt thử nghiệm tính năng, tạo test, viết vào tài liệu chuẩn, và thu thập phản hồi từ cộng đồng.
+
+→ Nếu mọi thứ ổn, các trình duyệt sẽ hỗ trợ tính năng và lập trình viên có thể dùng.
+
+4. NGUYÊN TẮC CỦA TIÊU CHUẨN WEB
+-----------------------------------
+a. **Mở (Open)**:
+- Ai cũng có thể tham gia đóng góp, sử dụng miễn phí.
+- Không bị kiểm soát bởi công ty riêng nào.
+- Tránh bị thu phí bản quyền hoặc bị dừng hỗ trợ.
+
+b. **Truy cập được và tương thích (Accessible & Interoperable)**:
+- Web cần hỗ trợ người khuyết tật: dùng bàn phím, trình đọc màn hình...
+- Trình duyệt khác nhau cần hiển thị nội dung giống nhau từ cùng một mã HTML/CSS/JS.
+
+c. **Không phá vỡ web (Don’t break the web)**:
+- Tính năng mới cần tương thích ngược.
+- Không làm hỏng các website cũ.
+- Trình duyệt cần hiển thị đúng, không khiến người dùng nhầm là web bị lỗi.
+
+5. CÁC CÔNG NGHỆ WEB CHÍNH
+----------------------------
+a. **HTML**: đánh dấu nội dung, cấu trúc và ý nghĩa.
+Ví dụ:
+<h1>Tiêu đề chính</h1>
+<p>Đoạn văn bản.</p>
+<img src="meo.jpg" alt="Con mèo" />
+
+b. **CSS**: định dạng giao diện, màu sắc, bố cục.
+Ví dụ:
+p {
+  color: red;
+}
+
+c. **JavaScript (JS)**: thêm hành vi, tương tác, hoạt ảnh, điều khiển động.
+Ví dụ:
+let p = document.querySelector("p");
+p.textContent = "Đã thay đổi!";
+
+- **API (giao diện lập trình ứng dụng)**: cung cấp chức năng mở rộng cho JS (ví dụ: lấy dữ liệu webcam, điều khiển DOM...).
+
+6. CÁC CÔNG NGHỆ KHÁC
+------------------------
+- **HTTP**: giao tiếp giữa client và server.
+- **SVG**: đồ họa vector.
+- **MathML**: hiển thị công thức toán học.
+
+→ Nhưng HTML, CSS, JS là ba công nghệ nền tảng.
+
+7. CÁC CÔNG CỤ HỖ TRỢ
+------------------------
+- **DevTools** trong trình duyệt để kiểm tra mã.
+- **Testing tools** để kiểm tra tính đúng của mã.
+- **Framework, thư viện JS** giúp xây web nhanh hơn.
+- **Linter/Formatter** như Prettier giúp mã sạch và đồng nhất.
+
+8. NGÔN NGỮ VÀ FRAMEWORK PHÍA SERVER (BACK-END)
+-------------------------------------------------
+- Khác với HTML/CSS/JS chạy ở trình duyệt (client), back-end chạy ở server.
+- Ví dụ: lấy dữ liệu từ database và gửi HTML kết quả cho trình duyệt.
+- Một số framework: ASP.NET (C#), Django (Python), Laravel (PHP), Next.js (JavaScript).
+
+→ Không phải là chuẩn web, nhưng cũng có quy trình phát triển mở.
+
+9. MÃ TĨNH VÀ MÃ ĐỘNG
+------------------------
+- **Tĩnh (Static)**: file HTML gửi nguyên si từ server → browser.
+- **Động (Dynamic)**: HTML được server tạo ra theo thời điểm và dữ liệu.
+- Thường kết hợp: template HTML tĩnh chứa phần động thay đổi theo dữ liệu.

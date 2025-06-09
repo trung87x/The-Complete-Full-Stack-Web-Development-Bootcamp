@@ -1,0 +1,89 @@
+TRÌNH DUYỆT TẢI VÀ HIỂN THỊ TRANG WEB NHƯ THẾ NÀO?
+==================================================
+
+1. TRÌNH DUYỆT NHẬN FILE GÌ TỪ WEB?
+-------------------------------------
+Khi truy cập trang web, trình duyệt gửi yêu cầu HTTP và nhận về nhiều loại tập tin như:
+
+- **HTML**: nội dung và cấu trúc trang.
+- **CSS**: định dạng và bố cục.
+- **JavaScript**: hành vi và tương tác.
+- **Tập tin media**: ảnh, video, âm thanh, PDF, SVG...
+- **Khác**: tài liệu Word, PowerPoint... nếu không mở được sẽ chuyển sang ứng dụng bên ngoài.
+
+2. QUY TRÌNH HIỂN THỊ TRANG WEB (RENDERING)
+--------------------------------------------
+Khi bạn nhập địa chỉ web hoặc click vào link, trình duyệt sẽ:
+- Gửi nhiều yêu cầu HTTP.
+- Nhận về nhiều file và bắt đầu xử lý để hiển thị ra màn hình.
+
+3. PHÂN TÍCH FILE HTML
+------------------------
+- Trình duyệt đọc file HTML và chuyển thành **DOM tree** (Cây Mô Hình Tài Liệu).
+- Mỗi thẻ, thuộc tính, đoạn văn bản đều thành **nút (node)** trong cây.
+
+Ví dụ:
+<p>
+  Let's use:
+  <span>HTML</span>
+  <span>CSS</span>
+  <span>JavaScript</span>
+</p>
+
+→ Cây DOM tương ứng:
+P
+├─ "Let's use:"
+├─ SPAN ─ "HTML"
+├─ SPAN ─ "CSS"
+└─ SPAN ─ "JavaScript"
+
+Một số thẻ sẽ kích hoạt thêm yêu cầu HTTP:
+- <link>: tải CSS ngoài
+- <script>: tải JavaScript
+- <img>, <video>, <audio>: tải nội dung đa phương tiện
+
+4. XỬ LÝ CSS VÀ VẼ TRANG
+--------------------------
+Trình duyệt sẽ:
+- Phân tích CSS (trong file hoặc trong HTML).
+- Xác định CSS áp dụng vào node nào → tạo ra **Render Tree**.
+- Dàn bố cục (layout), sau đó **vẽ (paint)** lên màn hình.
+
+Ví dụ:
+CSS:
+span {
+  border: 1px solid black;
+  background-color: lime;
+}
+
+→ Tất cả các thẻ <span> trong DOM sẽ có viền đen, nền xanh lá.
+
+5. XỬ LÝ JAVASCRIPT
+---------------------
+- Trình duyệt đọc và **chạy mã JavaScript** (có thể trong file hoặc trong HTML).
+- JavaScript có thể **thêm, sửa, xóa** các phần tử DOM.
+
+Ví dụ:
+const spans = document.querySelectorAll("span");
+spans.forEach((span) => {
+  const reversedText = span.textContent.split("").reverse().join("");
+  span.textContent = reversedText;
+});
+
+→ Kết quả: chữ trong các thẻ <span> bị đảo ngược (HTML → LMTH).
+
+6. CÁC BƯỚC KHÁC TRONG RENDERING
+----------------------------------
+- Trình duyệt còn tạo ra **Accessibility Tree**: giúp công cụ đọc màn hình hoạt động cho người khiếm thị.
+- Cấu trúc này dựa vào DOM và rất quan trọng cho khả năng tiếp cận.
+
+7. TRÌNH DUYỆT: VỪA KHÓ NHƯNG CŨNG RẤT TUYỆT
+----------------------------------------------
+- Trình duyệt là môi trường phức tạp:
+  + Nhiều thiết bị, hệ điều hành, tốc độ mạng, trình duyệt khác nhau.
+  + Khó đảm bảo mọi thứ chạy giống nhau cho mọi người.
+
+- Nhưng cũng rất tuyệt vời:
+  + Không cần cài đặt ứng dụng, chỉ cần truy cập bằng URL.
+  + Cập nhật dễ dàng: chỉ cần reload trang.
+  + Cộng đồng hỗ trợ mạnh, nguồn học tập phong phú.

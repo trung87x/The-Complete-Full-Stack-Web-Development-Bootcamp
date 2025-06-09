@@ -1,0 +1,117 @@
+TÌM VIỆC LÀM TRONG NGÀNH WEB
+===========================
+
+1. XÁC ĐỊNH LOẠI CÔNG VIỆC BẠN MUỐN
+-------------------------------------
+- Nghĩ xem bạn muốn làm công việc gì cụ thể:  
+  + Thiết kế giao diện (HTML, CSS, hình ảnh)  
+  + Lập trình JavaScript  
+  + Viết tài liệu kỹ thuật  
+  + Kỹ sư bán hàng / Developer relations  
+  + Freelancer hay nhân viên công ty  
+  + Trong ngành nào: y tế, tài chính, âm nhạc...?  
+  + Làm từ xa, văn phòng hay linh hoạt?  
+
+→ Viết ra vài gợi ý, tham khảo bạn bè, người hướng dẫn, hoặc các mẫu tuyển dụng để hiểu rõ hơn.
+
+2. PHÁT TRIỂN CÁC PHẨM CHẤT NHÀ TUYỂN DỤNG TÌM KIẾM
+-----------------------------------------------------
+- Ngoài kỹ năng chuyên môn, bạn cần:
+  + Hòa đồng, giao tiếp tốt, biết lắng nghe.
+  + Tinh thần tích cực, hợp tác, tôn trọng đa dạng.
+  + Bình tĩnh khi không được chọn hướng của mình.
+  + Kiên trì, giải quyết vấn đề tốt.
+
+→ Nếu bạn còn yếu ở điểm nào, hãy tìm khóa học, luyện tập với bạn bè, viết blog, thuyết trình thử…
+
+3. TẠO CV/RÉSUMÉ CHUYÊN NGHIỆP
+-------------------------------
+- Nên gồm:
+  + Thông tin liên hệ
+  + Mô tả ngắn về bản thân (1-2 câu)
+  + Kinh nghiệm làm việc: tên công ty, thời gian, vai trò, mô tả ngắn
+  + Trình độ học vấn, bằng cấp liên quan
+  + Dự án cá nhân, sở thích, link portfolio, GitHub...
+
+📌 Mẹo:
+- Gọn gàng, rõ ràng, tối đa 2 trang.
+- Tránh lỗi chính tả, dùng từ trang trọng.
+- Tùy chỉnh cho từng vị trí cụ thể.
+- Thêm “References available on request.” nếu chưa biết người giới thiệu.
+
+4. TẠO DANH MỤC DỰ ÁN (PORTFOLIO)
+----------------------------------
+- Bao gồm:
+  + Trang chính giới thiệu tổng quan.
+  + Danh sách dự án, mỗi dự án gồm tiêu đề, ảnh minh họa, mô tả, công nghệ dùng, link mã nguồn.
+  + Blog, bài viết kỹ thuật, video nói chuyện (nếu có).
+  + Link tới đóng góp mã nguồn mở (nêu rõ vai trò).
+
+💡 Giữ đơn giản, dễ xem, chỉ nên chọn vài dự án tiêu biểu.
+
+5. TẠO HỒ SƠ LINKEDIN
+-----------------------
+- LinkedIn là nền tảng cực kỳ phổ biến để tuyển dụng.
+- Nên có:
+  + Hồ sơ đầy đủ, chuyên nghiệp.
+  + Kinh nghiệm, kỹ năng, bài viết, giới thiệu từ người khác.
+  + Kết nối với đồng nghiệp, cộng đồng.
+
+→ Có thể dùng để xin việc trực tiếp, theo dõi công ty, học qua khóa online.
+
+6. CÁCH TÌM VIỆC
+------------------
+- Đăng ký nhận tin trên các website tuyển dụng (LinkedIn, VietnamWorks…)
+- Tìm qua cộng đồng, mạng lưới, hội chợ việc làm.
+- Tìm hiểu công ty bạn yêu thích, vào trang tuyển dụng của họ.
+- Tham dự meetup, sự kiện công nghệ.
+
+📌 Trước khi ứng tuyển:
+  + Đọc kỹ yêu cầu, tránh mất thời gian với công việc không phù hợp.
+  + Tìm hiểu công ty, sản phẩm, văn hóa làm việc.
+  + Tùy chỉnh CV cho vị trí đó.
+  + Nếu có thể, liên hệ nhân sự/nhân viên trong công ty để hỏi thêm.
+
+7. ỨNG TUYỂN
+--------------
+- Làm đúng theo hướng dẫn trong tin tuyển dụng.
+- Gửi CV + thư xin việc (nếu có yêu cầu).
+- Soạn thư xin việc thể hiện:
+  + Vì sao bạn phù hợp.
+  + Bạn thích gì ở công ty đó.
+  + Ví dụ dự án cụ thể chứng minh năng lực.
+
+📌 Soạn sẵn nội dung trước trong file riêng để tránh mất dữ liệu.
+
+8. CHUẨN BỊ PHỎNG VẤN
+-----------------------
+- Chuẩn bị nơi phỏng vấn yên tĩnh, gọn gàng.
+- Trang phục lịch sự, đơn giản.
+- Luyện tập kể chuyện về các trải nghiệm thật.
+- Nghiên cứu công ty, sản phẩm, đối thủ, giá trị cốt lõi.
+- Biết mức lương trung bình để có thể thương lượng hợp lý.
+
+📌 Luôn chuẩn bị vài câu hỏi để hỏi ngược lại nhà tuyển dụng — điều đó thể hiện bạn quan tâm và chủ động.
+
+9. PHỎNG VẤN CHÍNH
+---------------------
+- Có thể gồm:
+  + Phỏng vấn văn hóa, tính cách
+  + Phỏng vấn kỹ thuật: coding, mô tả quy trình, xử lý bug
+  + Câu hỏi tình huống: "Bạn xử lý xung đột nhóm như thế nào?"
+
+💡 Gợi ý: Chuẩn bị sẵn vài tình huống bạn từng trải qua để kể lại.
+
+10. CÂU HỎI KỸ THUẬT
+----------------------
+- Viết hàm JavaScript, phân tích mã, sửa lỗi, viết giải thuật…
+- Có thể làm bài tập về nhà: viết app nhỏ dùng API, demo ý tưởng…
+
+→ Luôn xác nhận rõ giới hạn bài tập (thời gian, mục tiêu), tránh bị yêu cầu làm việc quá mức.
+
+11. KHI NHẬN ĐƯỢC LỜI MỜI LÀM VIỆC
+------------------------------------
+- Đọc kỹ điều kiện làm việc, mức lương có hợp lý không?
+- Nếu cần dời lịch bắt đầu (do việc cũ, nghỉ phép đã đặt...), hãy báo ngay.
+- Nếu phải chuyển nhà, cần chuẩn bị kỹ trước khi nhận việc.
+
