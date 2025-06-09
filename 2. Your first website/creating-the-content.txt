@@ -1,0 +1,97 @@
+TẠO NỘI DUNG TRANG WEB VỚI HTML
+==================================
+
+1. HTML LÀ GÌ?
+----------------
+- HTML (HyperText Markup Language) là ngôn ngữ để xây dựng cấu trúc trang web.
+- HTML giúp xác định nội dung là gì: tiêu đề, đoạn văn, hình ảnh, danh sách, liên kết...
+
+Ví dụ ban đầu:
+Instructions for life:
+Eat
+Sleep
+Repeat
+
+→ Khi dùng HTML:
+<p>Instructions for life:</p>
+<ul>
+  <li>Eat</li>
+  <li>Sleep</li>
+  <li>Repeat</li>
+</ul>
+
+→ Trình duyệt sẽ hiển thị nội dung đẹp, có cấu trúc.
+
+2. TẠO FILE HTML ĐẦU TIÊN
+----------------------------
+a. Tạo thư mục: first-website  
+b. Trong đó, tạo file `index.html` và viết:
+
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>My test page</title>
+  </head>
+  <body>
+    <img src="" alt="My test image" />
+  </body>
+</html>
+
+Giải thích các phần:
+- <!doctype html>: bắt buộc, khai báo tài liệu HTML
+- <html>: bao toàn bộ nội dung
+- <head>: chứa meta, title, liên kết CSS
+- <meta charset>: hỗ trợ tiếng Việt và nhiều ngôn ngữ khác
+- <meta viewport>: hiển thị tốt trên thiết bị di động
+- <title>: tiêu đề hiển thị trên tab trình duyệt
+- <body>: chứa nội dung chính (văn bản, ảnh, liên kết...)
+
+3. CHÈN HÌNH ẢNH
+------------------
+- Câu lệnh: <img src="images/firefox-icon.png" alt="Logo Firefox: con cáo lửa ôm địa cầu" />
+- `src`: đường dẫn ảnh
+- `alt`: mô tả ảnh khi không hiển thị được (quan trọng cho người khiếm thị)
+
+Lưu ý:
+- <img> là thẻ không có thẻ đóng, gọi là "thẻ rỗng"
+- Đặt ảnh vào thư mục: images/
+
+4. CÁC THẺ VĂN BẢN THƯỜNG DÙNG
+-------------------------------
+a. Tiêu đề (Heading):
+   <h1>Tiêu đề chính</h1>
+   <h2>Tiêu đề phụ</h2>
+   <h3>Tiêu đề phụ nhỏ hơn</h3>
+
+→ Có 6 cấp từ <h1> đến <h6>
+
+b. Đoạn văn:
+   <p>Đây là một đoạn văn bản.</p>
+
+→ Dùng để hiển thị văn bản bình thường
+
+c. Danh sách:
+- Danh sách không thứ tự: <ul> + <li>
+- Danh sách có thứ tự: <ol> + <li>
+
+Ví dụ:
+<p>Các nhóm tại Mozilla gồm:</p>
+<ul>
+  <li>Nhà phát triển</li>
+  <li>Nhà tư tưởng</li>
+  <li>Người xây dựng</li>
+</ul>
+
+5. TẠO LIÊN KẾT (LINK)
+-------------------------
+Cách tạo liên kết:
+<a href="https://www.mozilla.org/en-US/about/manifesto/">
+  Mozilla Manifesto
+</a>
+
+→ `href` là địa chỉ web cần dẫn đến
+
+Lưu ý:
+- Bắt buộc dùng đầy đủ `https://` để đảm bảo hoạt động đúng

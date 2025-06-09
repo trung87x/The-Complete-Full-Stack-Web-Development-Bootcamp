@@ -1,0 +1,113 @@
+QUY TRÌNH VÀ CÁCH LÀM VIỆC TRONG DỰ ÁN WEB
+=========================================
+
+1. TỔNG QUAN
+--------------
+- Người mới học thường chỉ biết vài công cụ/ngôn ngữ riêng lẻ mà chưa hiểu toàn cảnh một dự án web gồm những gì.
+- Một website thực tế cần nhiều thành phần phối hợp: công nghệ, công cụ, vai trò công việc...
+
+2. COMBO CÔNG NGHỆ THƯỜNG DÙNG (TECH STACK)
+---------------------------------------------
+Ví dụ cấu trúc tổng thể của một website:
+- **Front-end**: HTML, CSS, JavaScript
+- **Back-end**: Node.js, .NET, PHP, Python...
+- **Cơ sở dữ liệu**: MySQL, PostgreSQL, MongoDB...
+- **Web server**: Apache, hoặc dịch vụ như Netlify
+
+Một số từ viết tắt thường thấy:
+- **MEAN** = MongoDB, Express, Angular, Node
+- **LAMP** = Linux, Apache, MySQL, PHP/Python
+
+Front-end thường gồm:
+- JS Framework (React...)
+- Template language (Mustache...)
+- CSS Framework (Tailwind...) hoặc CSS thuần
+- Trình kiểm thử (Jest...)
+- Công cụ đóng gói (Parcel...)
+
+Ngoài tech stack, còn có:
+- **Công cụ lập kế hoạch**: Miro
+- **Quản lý mã nguồn**: GitHub
+- **Thiết kế đồ họa**: Figma, Canva
+- **Quản lý dự án**: Trello, Asana...
+
+→ Không cần học hết ngay, cứ bắt đầu với HTML/CSS/JS, rồi dần hiểu thêm.
+
+3. CÁC VAI TRÒ TRONG NHÓM DỰ ÁN WEB
+-------------------------------------
+- **Product Manager**: xác định nhu cầu người dùng, định hướng sản phẩm, phân tích dữ liệu và đề xuất tính năng mới.
+- **Project Manager**: chia việc, theo dõi tiến độ, họp nhóm, điều chỉnh kế hoạch.
+- **UX Designer**: nghiên cứu người dùng, thiết kế trải nghiệm (flow, điều hướng...).
+- **Graphic Designer**: thiết kế hình ảnh, màu sắc, bố cục, mockup.
+- **Front-end Developer**: dùng HTML/CSS/JS để làm phần giao diện.
+- **Back-end Developer**: xử lý dữ liệu, viết API, kết nối cơ sở dữ liệu.
+- **Full-stack Developer**: làm cả front-end lẫn back-end.
+- **QA Engineer**: kiểm thử tính năng, báo lỗi, phối hợp sửa lỗi.
+- **Content Specialist / Technical Writer**: viết nội dung web, tài liệu hướng dẫn, UI text...
+
+Các vai trò ít phổ biến hơn:
+- **User Researcher**: chuyên nghiên cứu người dùng.
+- **SEO Specialist**: tối ưu web để lên top Google.
+
+4. CÁC GIAI ĐOẠN CỦA MỘT DỰ ÁN KỸ THUẬT
+----------------------------------------
+1. Product manager xác định nhu cầu → đề xuất tính năng mới.
+2. Cả nhóm bàn bạc và đồng ý thực hiện tính năng đó.
+3. Project manager lập kế hoạch chi tiết, phân việc.
+4. UX designer thiết kế flow và wireframe.
+5. Graphic designer làm mockup với màu sắc, font...
+6. Content specialist viết nội dung và tài liệu liên quan.
+7. Back-end developer xây API, xử lý dữ liệu.
+8. Front-end developer hiện thực tính năng, kết nối API.
+9. QA test kỹ, ghi lỗi.
+10. Developer sửa lỗi nghiêm trọng.
+11. Khi đạt yêu cầu → cho tính năng lên website.
+
+📌 Lưu ý: đây là phiên bản đơn giản hóa, các bước có thể xảy ra đồng thời hoặc đổi thứ tự.
+
+5. CÁCH QUẢN LÝ CÔNG VIỆC
+---------------------------
+a. **Waterfall** (thác nước):
+  - Chia rõ từng giai đoạn, làm theo thứ tự cố định.
+  - Ít thay đổi giữa chừng.
+  - Một đợt ra mắt lớn ở cuối.
+  - Phù hợp nếu yêu cầu rõ ràng từ đầu.
+  - Hạn chế: kém linh hoạt, sửa lỗi lâu.
+
+b. **Agile** (linh hoạt):
+  - Giai đoạn diễn ra song song.
+  - Ra mắt tính năng nhỏ liên tục.
+  - Ưu điểm: linh hoạt, đổi hướng nhanh.
+  - Nhược: dễ trễ deadline, luôn bị áp lực phải “ra tính năng mới”.
+
+6. SCRUM & KANBAN
+------------------
+a. **Scrum**:
+  - Người điều phối gọi là **Scrum Master** (thường là project manager).
+  - Chia việc theo vòng lặp 2 tuần gọi là **Sprint**.
+  - Mỗi Sprint có:
+    + Họp chọn việc mới → đưa vào **Backlog**
+    + Làm theo các cột trạng thái: “In Progress”, “In Review”...
+    + Họp nhanh mỗi ngày để cập nhật tiến độ (Daily Stand-up)
+    + Kết thúc Sprint thì tổng kết: điều gì tốt, chưa tốt, cải thiện gì?
+
+b. **Kanban**:
+  - Không chia theo Sprint.
+  - Tập trung vào cải tiến liên tục.
+  - Phù hợp công việc không có điểm kết thúc rõ ràng (ví dụ: hỗ trợ khách hàng).
+
+7. CÔNG CỤ QUẢN LÝ TRẠNG THÁI CÔNG VIỆC (KANBAN BOARD)
+---------------------------------------------------------
+- Trello, Asana, GitHub Projects... cung cấp bảng trạng thái.
+- Các cột thường thấy:
+  + “Backlog”, “To do”, “In progress”, “Done”
+  + Hoặc chia theo loại việc: “Thiết kế”, “Code”, “Viết nội dung”...
+
+→ Dù làm một mình, bạn cũng có thể tập dùng bảng Kanban:
+- Tạo nhiệm vụ.
+- Ước lượng thời gian, độ khó.
+- Gán độ ưu tiên, deadline.
+- Cập nhật trạng thái khi làm: “Đang làm”, “Đang kẹt”, “Xong”...
+
+→ Thử áp dụng vào chính dự án của bạn (ví dụ: website cá nhân), hoặc tham gia dự án mã nguồn mở.
+

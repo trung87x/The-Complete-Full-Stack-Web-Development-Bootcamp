@@ -1,0 +1,63 @@
+XUẤT BẢN TRANG WEB ĐẦU TIÊN
+=============================
+
+1. GIỚI THIỆU CHUNG
+---------------------
+Sau khi hoàn tất việc viết mã và tổ chức các tập tin (HTML, CSS, hình ảnh...), bạn cần đưa toàn bộ website lên Internet để người khác có thể truy cập được.
+
+Lưu ý:
+- Bạn cần có một website mẫu trên máy tính (ít nhất phải có file index.html).
+- Nếu chưa có, hãy tham khảo các bài học trước để tạo một trang web đơn giản.
+
+2. CÁC KHÁI NIỆM CƠ BẢN
+-------------------------
+- Hosting: không gian lưu trữ các tập tin website trên máy chủ.
+- Domain: địa chỉ web như https://tenban.com.
+- FTP: công cụ để chuyển tập tin từ máy tính lên hosting.
+
+3. LỰA CHỌN CÁCH XUẤT BẢN WEBSITE
+-----------------------------------
+a. Mua hosting + domain:
+   - Phù hợp khi bạn muốn kiểm soát tối đa.
+   - Có thể mua cả hai từ cùng một công ty hoặc khác nhau.
+
+b. Dùng GitHub Pages:
+   - Miễn phí, dễ dùng, phù hợp cho website tĩnh.
+   - Có thể đưa web lên nhanh chóng mà không cần cấu hình phức tạp.
+
+c. Dùng công cụ trực tuyến:
+   - Ví dụ: CodePen, JSFiddle, Glitch.
+   - Dễ học, không cần cài đặt, thích hợp để thử nghiệm hoặc chia sẻ.
+
+4. HƯỚNG DẪN ĐƯA WEBSITE LÊN GITHUB PAGES
+-------------------------------------------
+a. Tạo tài khoản GitHub tại https://github.com
+
+b. Tạo repository mới:
+   - Tên repo: tennguoidung.github.io (ví dụ: nguyenvanabc.github.io)
+
+c. Tải tập tin lên GitHub:
+   - Nhấn “upload files”
+   - Kéo thả toàn bộ file website vào khung upload
+   - Nhấn “Commit changes” để lưu
+
+d. Truy cập trang web:
+   - Mở trình duyệt → nhập: https://tennguoidung.github.io
+   - Đợi vài phút nếu chưa thấy web hiển thị ngay.
+
+5. MẸO TÌM HOSTING & DOMAIN
+-----------------------------
+- Tìm kiếm "web hosting" và "mua domain" trên Google.
+- Một số dịch vụ miễn phí:
+   + Neocities
+   + WordPress
+   + Google Sites
+
+- Nhà mạng ở nhà/văn phòng đôi khi có hỗ trợ hosting nhỏ.
+
+6. MỘT SỐ DỊCH VỤ TRỰC TUYẾN PHỔ BIẾN
+--------------------------------------
+- GitHub Pages: miễn phí, chất lượng tốt
+- Google App Engine: dùng cho cả web tĩnh và web động
+- CodePen, JSFiddle, JS Bin: dùng để học và chia sẻ mã nhanh
+- Glitch, Scrimba: có tính năng cộng tác, chạy mã trực tiếp

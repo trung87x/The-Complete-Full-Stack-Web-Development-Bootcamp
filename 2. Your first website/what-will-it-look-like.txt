@@ -1,0 +1,61 @@
+LÊN Ý TƯỞNG VÀ THIẾT KẾ TRANG WEB ĐẦU TIÊN
+===========================================
+
+1. MỤC TIÊU CỦA TRANG WEB
+---------------------------
+Trước khi viết mã, cần xác định rõ:
+
+- Trang web bạn nói về điều gì? (Ví dụ: chó, New York, Pac-Man...)
+- Bạn muốn trình bày nội dung gì? Viết tiêu đề, vài đoạn văn, và nghĩ về hình ảnh phù hợp.
+- Giao diện tổng thể ra sao? Màu nền gì? Font chữ kiểu gì? Nghiêm túc, vui nhộn, nhẹ nhàng?
+
+Lưu ý:
+- Dự án phức tạp thường cần hướng dẫn thiết kế riêng gọi là “design guide” hoặc “brand book”.
+
+2. PHÁC THẢO GIAO DIỆN TRÊN GIẤY
+----------------------------------
+- Lấy giấy bút và vẽ giao diện sơ bộ của trang.
+- Không cần đẹp, chỉ cần rõ bố cục: tiêu đề, hình ảnh, đoạn văn nằm ở đâu.
+
+→ Đây là bước quen thuộc ngay cả với các nhóm thiết kế chuyên nghiệp.
+
+Lưu ý:
+- Thiết kế web thường gồm:
+  + Graphic Designer: thiết kế hình ảnh, màu sắc
+  + UX Designer: thiết kế trải nghiệm người dùng (dễ nhìn, dễ hiểu, dễ thao tác)
+
+3. TẬP HỢP NỘI DUNG TRANG WEB
+------------------------------
+- Soạn sẵn:
+  + Tiêu đề trang
+  + Vài đoạn văn
+  + Hình ảnh minh họa
+
+4. CHỌN MÀU CHỦ ĐẠO (THEME COLOR)
+-----------------------------------
+- Truy cập công cụ chọn màu (Color Picker) trên web.
+- Chọn màu bạn thích → ghi lại mã màu dạng HEX, ví dụ: #660066
+- Mã HEX sẽ dùng trong CSS để tô màu.
+
+5. CHỌN HÌNH ẢNH
+-----------------
+- Vào Google Images, tìm hình phù hợp với nội dung.
+- Nhấp vào ảnh → chuột phải → Save Image As…
+- Lưu ở nơi dễ nhớ (ví dụ: thư mục images/ trong dự án)
+
+⚠️ Lưu ý bản quyền:
+- Dùng bộ lọc của Google:
+  + Nhấn "Tools" → "Usage rights" → chọn "Creative Commons licenses"
+  + Chỉ chọn ảnh có giấy phép sử dụng lại.
+
+6. CHỌN FONT CHỮ
+-----------------
+a. Font có sẵn (web-safe fonts):  
+   - Arial, Times New Roman, Courier New...
+   - Có sẵn trên máy người dùng, không cần tải.
+
+b. Font bên ngoài (từ Google Fonts):
+   - Truy cập: https://fonts.google.com
+   - Tìm font phù hợp → nhấn "Get font" → rồi "Get embed code"
+   - Copy 2 đoạn mã được cung cấp → lưu lại để dùng trong HTML/CSS
+

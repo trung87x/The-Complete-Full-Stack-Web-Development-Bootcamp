@@ -1,0 +1,70 @@
+MẠNG WEB HOẠT ĐỘNG NHƯ THẾ NÀO?
+===============================
+
+1. CLIENT VÀ SERVER
+---------------------
+- **Client** là thiết bị của người dùng (máy tính, điện thoại), dùng trình duyệt để truy cập web.
+- **Server** là máy chủ lưu trữ các trang web. Khi bạn truy cập, nó gửi bản sao nội dung về cho trình duyệt.
+
+→ Client gửi yêu cầu → Server phản hồi bằng dữ liệu → Trình duyệt hiển thị trang web.
+
+2. CÁC THÀNH PHẦN KHÁC TRÊN ĐƯỜNG TRUYỀN
+-------------------------------------------
+- **Kết nối Internet**: giống như con đường kết nối nhà bạn (client) đến cửa hàng (server).
+- **TCP/IP**: giao thức giúp dữ liệu di chuyển, giống như phương tiện (xe máy, ô tô...).
+- **DNS**: hệ thống “sổ địa chỉ” giúp tìm đúng server khi bạn gõ địa chỉ web.
+- **HTTP**: ngôn ngữ dùng để giao tiếp giữa client và server.
+- **Files**: gồm mã nguồn (HTML, CSS, JS) và tài nguyên khác (ảnh, video, file PDF...).
+
+3. CÁCH TRÌNH DUYỆT TẢI TRANG WEB
+-----------------------------------
+Khi bạn nhập địa chỉ vào trình duyệt:
+
+1. Trình duyệt hỏi DNS để tìm IP của trang web.
+2. Gửi yêu cầu HTTP đến server (theo giao thức TCP/IP).
+3. Server phản hồi bằng các file (HTML, CSS, JS...) chia nhỏ thành nhiều gói tin.
+4. Trình duyệt ghép các gói lại, hiển thị thành trang web hoàn chỉnh.
+
+4. DNS LÀ GÌ?
+---------------
+- Địa chỉ thật của website là dãy số IP (ví dụ: 192.0.2.172).
+- DNS giúp chuyển từ tên miền dễ nhớ (như mozilla.org) sang đúng địa chỉ IP.
+
+→ Bạn có thể gõ IP vào trình duyệt thay cho tên miền (nếu biết).
+
+5. PACKET LÀ GÌ?
+-------------------
+- Dữ liệu web không gửi nguyên khối mà được chia thành **gói nhỏ (packets)**.
+- Ưu điểm:
+  + Nếu bị lỗi, chỉ cần gửi lại 1 phần nhỏ thay vì toàn bộ.
+  + Có thể gửi qua nhiều đường khác nhau, nhanh hơn, phục vụ nhiều người cùng lúc.
+
+6. CÁCH HTTP HOẠT ĐỘNG
+------------------------
+- HTTP dùng các **phương thức (method)** như GET, POST...
+- Ví dụ: trình duyệt yêu cầu trang MDN:
+  GET /en-US/ HTTP/2
+  Host: developer.mozilla.org
+
+→ Server phản hồi:
+  HTTP/2 200
+  Content-type: text/html
+  <!doctype html>...
+
+→ Mã trạng thái phổ biến:
+- 200: Thành công
+- 301: Chuyển hướng vĩnh viễn
+- 400: Lỗi cú pháp yêu cầu
+- 403: Bị từ chối truy cập
+- 404: Không tìm thấy trang
+- 503: Server đang bảo trì
+
+7. CẤU TRÚC MỘT URL
+---------------------
+Ví dụ URL: https://developer.mozilla.org/en-US/
+
+- **https**: giao thức an toàn
+- **developer.mozilla.org**: tên miền (có thể có phần phụ như developer.)
+- **/en-US/**: đường dẫn đến nội dung cụ thể (ở đây là trang tiếng Anh)
+
+→ Trình duyệt sẽ tự chọn ngôn ngữ phù hợp nếu trang web hỗ trợ.
