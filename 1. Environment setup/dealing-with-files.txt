@@ -1,0 +1,89 @@
+/**
+ * Managing Files and Folders for Web Projects
+ */
+
+// 1. Overview
+const overview = {
+  description: "Hướng dẫn tổ chức file và thư mục cho dự án website, đặt tên đúng, tạo file và quản lý đường dẫn (path)."
+};
+
+// 2. Prerequisites
+const prerequisites = [
+  "Biết cách dùng hệ điều hành và phần mềm xây dựng website cơ bản (như VS Code)."
+];
+
+// 3. Learning Outcomes
+const learningOutcomes = [
+  "Tạo, sửa, di chuyển file và thư mục",
+  "Áp dụng cách đặt tên đúng chuẩn",
+  "Hiểu cấu trúc thư mục website",
+  "Sử dụng đúng file path và phần mở rộng (extension)"
+];
+
+// 4. File Management UI
+const fileUI = {
+  macOS: "Dùng Finder",
+  windows: "Dùng File Explorer",
+  note: "Tạo và chỉnh sửa file trong Home folder (Documents/web-projects)"
+};
+
+// 5. Creating Folder
+const folderCreation = {
+  location: "Home/Documents/web-projects",
+  actions: {
+    windows: "Ctrl + Shift + N",
+    macOS: "Cmd + Shift + N"
+  }
+};
+
+// 6. Using VS Code for Projects
+const vscodeUsage = {
+  openFolder: "File > Open Folder (Ctrl+K, O or Cmd+Shift+P > Open Folder)",
+  trustDialog: "Chọn 'Yes, I trust the authors' khi VS Code hỏi",
+  explorerPane: "Sử dụng EXPLORER trong VS Code để tạo và di chuyển file"
+};
+
+// 7. Creating and Moving Files
+const fileOps = {
+  create: "Click New File, đặt tên là index.html",
+  move: "Tạo folder test-site, kéo index.html vào đó hoặc dùng Ctrl/Cmd + X/V"
+};
+
+// 8. Recommended Website Structure
+const siteStructure = {
+  folders: ["test-site", "images", "styles", "scripts"],
+  files: ["index.html"],
+  description: "Tách các phần ảnh, CSS, JavaScript thành thư mục riêng"
+};
+
+// 9. File Naming Best Practices
+const fileNaming = {
+  rules: [
+    "Chỉ dùng chữ thường và không dấu cách",
+    "Dùng dấu gạch ngang (-) nếu cần tách từ",
+    "Giữ phần mở rộng chính xác (.html, .jpg, .css, .js)"
+  ],
+  reasons: [
+    "Tránh lỗi không nhận đúng file",
+    "Tránh lỗi không tương thích hệ điều hành",
+    "Dễ gõ lệnh CLI, không cần thêm dấu nháy"
+  ]
+};
+
+// 10. File Paths
+const filePaths = {
+  sameFolder: "my-image.jpg",
+  subFolder: "images/my-image.jpg",
+  parentFolder: "../my-image.jpg",
+  deepPath: "../subfolder/another/my-image.jpg"
+};
+
+// 11. Insert Image in HTML
+const htmlImageExample = {
+  tag: '<img src="images/firefox-icon.png" alt="My test image" />',
+  steps: [
+    "Đặt ảnh vào folder images",
+    "Cập nhật src="..." tương ứng tên file ảnh",
+    "Mở HTML bằng trình duyệt để kiểm tra"
+  ]
+};
