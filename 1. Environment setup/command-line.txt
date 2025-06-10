@@ -1,107 +1,36 @@
-GIỚI THIỆU DÒNG LỆNH (TERMINAL / COMMAND LINE)
-==============================================
+COMMAND LINE CƠ BẢN
+====================
 
-1. TERMINAL LÀ GÌ?
--------------------
-- Là giao diện dòng lệnh, giúp chạy lệnh để thao tác với hệ thống.
-- Gần như mọi công cụ lập trình web hiện đại đều yêu cầu dùng terminal.
+1. MỞ TERMINAL
+--------------
+- Linux/macOS: Mở Terminal có sẵn.
+- Windows:
+  + `cmd`: đơn giản, hạn chế.
+  + `PowerShell`: mạnh hơn.
+  + `Git Bash`: kèm theo Git.
+  + `WSL`: chạy Linux trên Windows.
 
-2. CÁCH MỞ TERMINAL
---------------------
-Linux: terminal có sẵn trong hệ thống.
+2. ĐIỀU HƯỚNG & LIỆT KÊ
+------------------------
+- `cd folder/`: vào thư mục  
+- `cd ..`: về thư mục trước  
+- `ls`: liệt kê thư mục (Unix) | `dir`: tương đương (Windows)  
+- `ls -l`: chi tiết | `-a`: file ẩn | `-lah`: kết hợp  
+- [Tab]: tự động hoàn thành
 
-macOS: mở tại Applications > Utilities > Terminal
+3. QUẢN LÝ FILE/THƯ MỤC
+------------------------
+- Tạo: `mkdir tên_thư_mục` | `touch tên_file`  
+- Xóa: `rm file` | `rmdir thư_mục_rỗng` | `rm -r thư_mục`  
+- Đổi tên/Di chuyển: `mv a.txt b.txt`  
+- Sao chép: `cp a.txt b.txt`  
+- Dùng `*` để đại diện: `rm *.log` → xóa tất cả `.log`
 
-Windows:
-- Có thể dùng: CMD (cmd), PowerShell, Git Bash
-- Khuyên dùng: WSL (Windows Subsystem for Linux)
-
-3. MỘT SỐ KHÁI NIỆM LIÊN QUAN
-------------------------------
-- Terminal: phần mềm mở shell
-- Shell: môi trường thao tác dòng lệnh
-- Command line: dòng bạn nhập lệnh
-
-4. LỆNH CƠ BẢN (BUILT-IN)
---------------------------
-- Di chuyển thư mục:         cd
-- Lên 1 thư mục:             cd ..
-- Tạo thư mục:               mkdir ten-thu-muc
-- Tạo file rỗng:             touch ten-file.txt
-- Xem nội dung thư mục:      ls (Unix), dir (Windows cmd)
-- Copy file:                 cp file1.txt file2.txt
-- Đổi tên / di chuyển:       mv file.txt file2.txt
-- Xoá file:                  rm file.txt
-- Xoá thư mục rỗng:          rmdir thu-muc/
-- Xoá thư mục và toàn bộ bên trong: rm -r ten-thu-muc
-- Tìm trong file:            grep "chuỗi" file.txt
-- Xem file:                  cat file.txt hoặc less file.txt
-- Tải từ web:                curl https://...
-
-Lưu ý:
-- Dùng phím TAB để gợi ý tên thư mục hoặc file.
-- Dấu `*` là ký tự đại diện (wildcard), ví dụ: rm mdn-*.txt
-
-5. TÙY CHỌN LỆNH (FLAGS/OPTIONS)
----------------------------------
-- Ví dụ: ls -l → xem chi tiết file
-- Dùng `man <tên lệnh>` để xem hướng dẫn.
-- Ví dụ: man ls
-
-6. KẾT HỢP LỆNH BẰNG PIPE |
+4. PIPE `|` — KẾT HỢP LỆNH
 ---------------------------
-- Dùng `|` để nối đầu ra của lệnh này sang đầu vào lệnh khác.
+- `lệnh1 | lệnh2`: đầu ra của lệnh1 là đầu vào lệnh2  
 
-Ví dụ:
-- Đếm số file/thư mục:
-  ls | wc -l
-
-- Kiểm tra redirect:
-  curl -L -I URL | grep location
-
-- Tạo URL đầy đủ:
-  curl -L -I URL | grep location | awk '{ print "https://site.com" $2 }'
-
-7. THỰC HÀNH VỚI PRETTIER (DÒNG LỆNH)
---------------------------------------
-a. Cài đặt Node.js (gồm cả npm): https://nodejs.org/
-
-b. Cài Prettier nội bộ:
-   npm install --save-dev prettier
-
-c. Tạo file index.js:
-   const myObj = {a:1,b:{c:2}}  
-   function printMe(obj){console.log(obj.b.c)}  
-   printMe(myObj)
-
-d. Kiểm tra định dạng:
-   npx prettier --check index.js
-
-e. Tự động định dạng:
-   npx prettier --write index.js
-
-Kết quả: file được format lại đẹp và chuẩn.
-
-8. MỘT SỐ CÔNG CỤ CLI HAY KHÁC
--------------------------------
-- bat: xem file đẹp hơn cat
-- prettyping: hiển thị ping dạng trực quan
-- htop: xem tiến trình đang chạy
-- tldr: tra cứu lệnh đơn giản, gọn gàng
-
-9. LƯU Ý KHI DÙNG TERMINAL
----------------------------
-- Hãy cẩn thận khi dùng lệnh xoá (rm -r), không có thùng rác!
-- Hãy viết lệnh trong file trước khi chạy nếu không chắc.
-- Có thể dùng terminal online để luyện tập an toàn:
-  + scrimba.com
-  + glitch.com
-  + tldr.sh (tra cứu lệnh)
-
-10. GHI NHỚ NGẮN GỌN
-----------------------
-- Terminal = công cụ không thể thiếu của lập trình viên
-- Làm chủ các lệnh cd, ls, mkdir, touch, mv, rm...
-- Dùng pipe `|` để kết hợp nhiều lệnh
-- Cài đặt công cụ như prettier, eslint bằng npm
-- Luôn thử lệnh mới ở nơi an toàn
+Ví dụ:  
+- `ls | wc -l`: đếm số file/thư mục  
+- `curl -I -L <url> | grep location`: kiểm tra redirect  
+- `... | awk '{print "https://site.com" $2}'`: xử lý chuỗi
