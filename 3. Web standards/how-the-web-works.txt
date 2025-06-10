@@ -1,70 +1,45 @@
-MẠNG WEB HOẠT ĐỘNG NHƯ THẾ NÀO?
-===============================
+INTERNET VẬN HÀNH NHƯ THẾ NÀO KHI TRUY CẬP TRANG WEB
+=======================================================
 
-1. CLIENT VÀ SERVER
----------------------
-- **Client** là thiết bị của người dùng (máy tính, điện thoại), dùng trình duyệt để truy cập web.
-- **Server** là máy chủ lưu trữ các trang web. Khi bạn truy cập, nó gửi bản sao nội dung về cho trình duyệt.
+1. MỤC TIÊU
+- Hiểu quá trình khi người dùng gõ URL vào trình duyệt.
+- Nắm vai trò của DNS, HTTP, TCP/IP, địa chỉ IP, trình duyệt, máy chủ.
 
-→ Client gửi yêu cầu → Server phản hồi bằng dữ liệu → Trình duyệt hiển thị trang web.
+2. THÀNH PHẦN THAM GIA
+- **Client**: thiết bị người dùng (laptop, điện thoại, trình duyệt).
+- **Server**: máy chủ lưu trữ và gửi nội dung trang web.
+- **DNS**: "danh bạ" để tìm địa chỉ IP của website.
+- **HTTP**: giao thức truyền nội dung giữa client ↔ server.
+- **TCP/IP**: giao thức mạng giúp gói dữ liệu đi từ A đến B.
 
-2. CÁC THÀNH PHẦN KHÁC TRÊN ĐƯỜNG TRUYỀN
--------------------------------------------
-- **Kết nối Internet**: giống như con đường kết nối nhà bạn (client) đến cửa hàng (server).
-- **TCP/IP**: giao thức giúp dữ liệu di chuyển, giống như phương tiện (xe máy, ô tô...).
-- **DNS**: hệ thống “sổ địa chỉ” giúp tìm đúng server khi bạn gõ địa chỉ web.
-- **HTTP**: ngôn ngữ dùng để giao tiếp giữa client và server.
-- **Files**: gồm mã nguồn (HTML, CSS, JS) và tài nguyên khác (ảnh, video, file PDF...).
+3. TÓM TẮT QUY TRÌNH TRUY CẬP TRANG WEB
+a. Người dùng nhập địa chỉ web (VD: mozilla.org)
+b. Trình duyệt truy vấn DNS → tìm ra địa chỉ IP tương ứng
+c. Trình duyệt gửi HTTP request tới server
+d. Server phản hồi bằng HTTP response (status code + nội dung)
+e. Trình duyệt nhận file HTML + CSS + JS → lắp ráp và hiển thị
 
-3. CÁCH TRÌNH DUYỆT TẢI TRANG WEB
------------------------------------
-Khi bạn nhập địa chỉ vào trình duyệt:
+4. CÁC THÀNH PHẦN TRONG URL
+Ví dụ:
+https://developer.mozilla.org/en-US/
 
-1. Trình duyệt hỏi DNS để tìm IP của trang web.
-2. Gửi yêu cầu HTTP đến server (theo giao thức TCP/IP).
-3. Server phản hồi bằng các file (HTML, CSS, JS...) chia nhỏ thành nhiều gói tin.
-4. Trình duyệt ghép các gói lại, hiển thị thành trang web hoàn chỉnh.
+- `https`: giao thức bảo mật
+- `developer.mozilla.org`: domain + subdomain
+- `/en-US/`: đường dẫn tới tài nguyên cụ thể
 
-4. DNS LÀ GÌ?
----------------
-- Địa chỉ thật của website là dãy số IP (ví dụ: 192.0.2.172).
-- DNS giúp chuyển từ tên miền dễ nhớ (như mozilla.org) sang đúng địa chỉ IP.
+5. GÓI DỮ LIỆU (PACKETS)
+- Dữ liệu gửi qua mạng được chia nhỏ thành nhiều **packet**.
+- Mỗi packet đi đường riêng → đến đích rồi được lắp lại.
+- Nếu gói bị lỗi → chỉ cần gửi lại 1 phần, tiết kiệm hơn gửi lại cả file.
 
-→ Bạn có thể gõ IP vào trình duyệt thay cho tên miền (nếu biết).
+6. HTTP STATUS CODES PHỔ BIẾN
+- `200 OK`: thành công
+- `301`: chuyển hướng vĩnh viễn
+- `403`: bị cấm truy cập
+- `404`: không tìm thấy trang
+- `503`: server lỗi hoặc bảo trì
 
-5. PACKET LÀ GÌ?
--------------------
-- Dữ liệu web không gửi nguyên khối mà được chia thành **gói nhỏ (packets)**.
-- Ưu điểm:
-  + Nếu bị lỗi, chỉ cần gửi lại 1 phần nhỏ thay vì toàn bộ.
-  + Có thể gửi qua nhiều đường khác nhau, nhanh hơn, phục vụ nhiều người cùng lúc.
-
-6. CÁCH HTTP HOẠT ĐỘNG
-------------------------
-- HTTP dùng các **phương thức (method)** như GET, POST...
-- Ví dụ: trình duyệt yêu cầu trang MDN:
-  GET /en-US/ HTTP/2
-  Host: developer.mozilla.org
-
-→ Server phản hồi:
-  HTTP/2 200
-  Content-type: text/html
-  <!doctype html>...
-
-→ Mã trạng thái phổ biến:
-- 200: Thành công
-- 301: Chuyển hướng vĩnh viễn
-- 400: Lỗi cú pháp yêu cầu
-- 403: Bị từ chối truy cập
-- 404: Không tìm thấy trang
-- 503: Server đang bảo trì
-
-7. CẤU TRÚC MỘT URL
----------------------
-Ví dụ URL: https://developer.mozilla.org/en-US/
-
-- **https**: giao thức an toàn
-- **developer.mozilla.org**: tên miền (có thể có phần phụ như developer.)
-- **/en-US/**: đường dẫn đến nội dung cụ thể (ở đây là trang tiếng Anh)
-
-→ Trình duyệt sẽ tự chọn ngôn ngữ phù hợp nếu trang web hỗ trợ.
+7. MẸO THỰC HÀNH NHANH
+- Truy cập https://nslookup.io → gõ tên miền → xem địa chỉ IP.
+- Dán IP vào trình duyệt → thử truy cập trang.
+- Dùng công cụ như DevTools (F12) → tab Network → xem chi tiết HTTP request/response.

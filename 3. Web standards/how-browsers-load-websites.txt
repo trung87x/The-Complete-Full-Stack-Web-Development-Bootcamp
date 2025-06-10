@@ -1,28 +1,22 @@
-TRÌNH DUYỆT TẢI VÀ HIỂN THỊ TRANG WEB NHƯ THẾ NÀO?
-==================================================
+TRÌNH DUYỆT HOẠT ĐỘNG NHƯ THẾ NÀO KHI TẢI WEBSITE
+===================================================
 
-1. TRÌNH DUYỆT NHẬN FILE GÌ TỪ WEB?
--------------------------------------
-Khi truy cập trang web, trình duyệt gửi yêu cầu HTTP và nhận về nhiều loại tập tin như:
+1. MỤC TIÊU
+- Hiểu quy trình trình duyệt tải và hiển thị website.
+- Nắm vai trò của HTML, CSS, JavaScript trong quá trình hiển thị (render).
+- Biết khái niệm: DOM, render tree, paint, accessibility tree.
 
-- **HTML**: nội dung và cấu trúc trang.
-- **CSS**: định dạng và bố cục.
-- **JavaScript**: hành vi và tương tác.
-- **Tập tin media**: ảnh, video, âm thanh, PDF, SVG...
-- **Khác**: tài liệu Word, PowerPoint... nếu không mở được sẽ chuyển sang ứng dụng bên ngoài.
+2. KHI TRUY CẬP MỘT TRANG WEB, TRÌNH DUYỆT SẼ:
+- Gửi các yêu cầu HTTP tới server.
+- Nhận lại các tệp:
+  + HTML: nội dung và cấu trúc trang.
+  + CSS: định dạng, màu sắc, font, layout...
+  + JS: tương tác, xử lý động.
+  + Ảnh, video, audio, SVG, PDF...
 
-2. QUY TRÌNH HIỂN THỊ TRANG WEB (RENDERING)
---------------------------------------------
-Khi bạn nhập địa chỉ web hoặc click vào link, trình duyệt sẽ:
-- Gửi nhiều yêu cầu HTTP.
-- Nhận về nhiều file và bắt đầu xử lý để hiển thị ra màn hình.
+→ Sau đó bắt đầu quá trình **render (hiển thị)**.
 
-3. PHÂN TÍCH FILE HTML
-------------------------
-- Trình duyệt đọc file HTML và chuyển thành **DOM tree** (Cây Mô Hình Tài Liệu).
-- Mỗi thẻ, thuộc tính, đoạn văn bản đều thành **nút (node)** trong cây.
-
-Ví dụ:
+3. BƯỚC 1: XỬ LÝ HTML → TẠO DOM
 <p>
   Let's use:
   <span>HTML</span>
@@ -30,60 +24,36 @@ Ví dụ:
   <span>JavaScript</span>
 </p>
 
-→ Cây DOM tương ứng:
+DOM sinh ra:
 P
 ├─ "Let's use:"
-├─ SPAN ─ "HTML"
-├─ SPAN ─ "CSS"
-└─ SPAN ─ "JavaScript"
+├─ SPAN → "HTML"
+├─ SPAN → "CSS"
+└─ SPAN → "JavaScript"
 
-Một số thẻ sẽ kích hoạt thêm yêu cầu HTTP:
-- <link>: tải CSS ngoài
-- <script>: tải JavaScript
-- <img>, <video>, <audio>: tải nội dung đa phương tiện
+- Mỗi thẻ HTML → 1 node trong DOM Tree.
+- DOM là cấu trúc dạng cây lưu trong bộ nhớ trình duyệt.
 
-4. XỬ LÝ CSS VÀ VẼ TRANG
---------------------------
-Trình duyệt sẽ:
-- Phân tích CSS (trong file hoặc trong HTML).
-- Xác định CSS áp dụng vào node nào → tạo ra **Render Tree**.
-- Dàn bố cục (layout), sau đó **vẽ (paint)** lên màn hình.
-
-Ví dụ:
-CSS:
+4. BƯỚC 2: PHÂN TÍCH CSS → TẠO RENDER TREE
 span {
   border: 1px solid black;
   background-color: lime;
 }
 
-→ Tất cả các thẻ <span> trong DOM sẽ có viền đen, nền xanh lá.
+- Trình duyệt chọn các node phù hợp → áp dụng style.
+- Kết quả: các `<span>` có viền đen, nền xanh lá.
+- Render tree xây dựng từ DOM + CSS → sau đó mới **paint (vẽ)** ra màn hình.
 
-5. XỬ LÝ JAVASCRIPT
----------------------
-- Trình duyệt đọc và **chạy mã JavaScript** (có thể trong file hoặc trong HTML).
-- JavaScript có thể **thêm, sửa, xóa** các phần tử DOM.
-
-Ví dụ:
+5. BƯỚC 3: XỬ LÝ JAVASCRIPT
 const spans = document.querySelectorAll("span");
 spans.forEach((span) => {
-  const reversedText = span.textContent.split("").reverse().join("");
-  span.textContent = reversedText;
+  const reversed = span.textContent.split("").reverse().join("");
+  span.textContent = reversed;
 });
 
-→ Kết quả: chữ trong các thẻ <span> bị đảo ngược (HTML → LMTH).
+- JS được chạy sau khi DOM tạo xong.
+- Trong ví dụ trên: đảo ngược từng từ trong `<span>` → "HTML" thành "LMTH", v.v.
 
-6. CÁC BƯỚC KHÁC TRONG RENDERING
-----------------------------------
-- Trình duyệt còn tạo ra **Accessibility Tree**: giúp công cụ đọc màn hình hoạt động cho người khiếm thị.
-- Cấu trúc này dựa vào DOM và rất quan trọng cho khả năng tiếp cận.
-
-7. TRÌNH DUYỆT: VỪA KHÓ NHƯNG CŨNG RẤT TUYỆT
-----------------------------------------------
-- Trình duyệt là môi trường phức tạp:
-  + Nhiều thiết bị, hệ điều hành, tốc độ mạng, trình duyệt khác nhau.
-  + Khó đảm bảo mọi thứ chạy giống nhau cho mọi người.
-
-- Nhưng cũng rất tuyệt vời:
-  + Không cần cài đặt ứng dụng, chỉ cần truy cập bằng URL.
-  + Cập nhật dễ dàng: chỉ cần reload trang.
-  + Cộng đồng hỗ trợ mạnh, nguồn học tập phong phú.
+6. BƯỚC 4: XÂY DỰNG CÂY HỖ TRỢ TRUY CẬP (ACCESSIBILITY TREE)
+- Dựa trên DOM → tạo ra cấu trúc giúp screen reader truy cập nội dung.
+- Hỗ trợ người khiếm thị hoặc không thể đọc màn hình trực tiếp.

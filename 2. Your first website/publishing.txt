@@ -1,63 +1,46 @@
-XUẤT BẢN TRANG WEB ĐẦU TIÊN
-=============================
+ĐĂNG TẢI WEBSITE LÊN INTERNET
+===============================
 
-1. GIỚI THIỆU CHUNG
----------------------
-Sau khi hoàn tất việc viết mã và tổ chức các tập tin (HTML, CSS, hình ảnh...), bạn cần đưa toàn bộ website lên Internet để người khác có thể truy cập được.
+1. MỤC TIÊU
+- Biết cách đưa website từ máy tính cá nhân lên mạng Internet.
+- Làm quen các khái niệm: hosting, domain, GitHub Pages.
+- Thực hành đăng tải bằng GitHub.
 
-Lưu ý:
-- Bạn cần có một website mẫu trên máy tính (ít nhất phải có file index.html).
-- Nếu chưa có, hãy tham khảo các bài học trước để tạo một trang web đơn giản.
+2. CÁCH PHỔ BIẾN ĐỂ ĐĂNG WEBSITE
+- Mua **hosting** và **tên miền** (domain):
+  + Hosting: nơi chứa file trang web (index.html, hình ảnh…).
+  + Domain: địa chỉ web như `example.com`.
+  + Có thể mua chung hoặc riêng, nếu riêng cần trỏ domain về đúng hosting.
 
-2. CÁC KHÁI NIỆM CƠ BẢN
--------------------------
-- Hosting: không gian lưu trữ các tập tin website trên máy chủ.
-- Domain: địa chỉ web như https://tenban.com.
-- FTP: công cụ để chuyển tập tin từ máy tính lên hosting.
+- Dùng **GitHub Pages**: miễn phí, phù hợp học tập, demo.
+- Dùng **công cụ nền web** (CodePen, Glitch,...): dễ dùng, không cần cài đặt.
 
-3. LỰA CHỌN CÁCH XUẤT BẢN WEBSITE
------------------------------------
-a. Mua hosting + domain:
-   - Phù hợp khi bạn muốn kiểm soát tối đa.
-   - Có thể mua cả hai từ cùng một công ty hoặc khác nhau.
+3. DÙNG GITHUB PAGES (KHUYẾN NGHỊ CHO NGƯỜI MỚI)
+a. Tạo tài khoản GitHub: https://github.com  
+b. Xác minh email sau khi đăng ký.
 
-b. Dùng GitHub Pages:
-   - Miễn phí, dễ dùng, phù hợp cho website tĩnh.
-   - Có thể đưa web lên nhanh chóng mà không cần cấu hình phức tạp.
+c. Tạo repository:
+  - Tên repo phải là: `tennguoidung.github.io`
+  - VD: nếu tên tài khoản là `trungdev` thì repo là `trungdev.github.io`
 
-c. Dùng công cụ trực tuyến:
-   - Ví dụ: CodePen, JSFiddle, Glitch.
-   - Dễ học, không cần cài đặt, thích hợp để thử nghiệm hoặc chia sẻ.
+d. Upload file trang web:
+  - Truy cập repo vừa tạo → chọn `Add file` → `Upload files`
+  - Kéo cả thư mục website (phải có file `index.html`) vào khu vực upload.
+  - Nhấn “Commit changes”.
 
-4. HƯỚNG DẪN ĐƯA WEBSITE LÊN GITHUB PAGES
--------------------------------------------
-a. Tạo tài khoản GitHub tại https://github.com
+e. Truy cập trang web:
+  - Truy cập theo địa chỉ: `https://tennguoidung.github.io`
+  - VD: `https://trungdev.github.io`
+  - Ghi chú: Có thể mất vài phút để website hiển thị lần đầu.
 
-b. Tạo repository mới:
-   - Tên repo: tennguoidung.github.io (ví dụ: nguyenvanabc.github.io)
+4. CÁC CÁCH KHÁC
+- Hosting + Domain (mất phí):
+  + Tự kiểm soát, phù hợp làm dự án thật.
+  + Cần FTP hoặc giao diện kéo thả để upload file.
 
-c. Tải tập tin lên GitHub:
-   - Nhấn “upload files”
-   - Kéo thả toàn bộ file website vào khung upload
-   - Nhấn “Commit changes” để lưu
+- Dịch vụ miễn phí:
+  + Neocities, Google Sites, WordPress (giới hạn nhiều chức năng).
 
-d. Truy cập trang web:
-   - Mở trình duyệt → nhập: https://tennguoidung.github.io
-   - Đợi vài phút nếu chưa thấy web hiển thị ngay.
-
-5. MẸO TÌM HOSTING & DOMAIN
------------------------------
-- Tìm kiếm "web hosting" và "mua domain" trên Google.
-- Một số dịch vụ miễn phí:
-   + Neocities
-   + WordPress
-   + Google Sites
-
-- Nhà mạng ở nhà/văn phòng đôi khi có hỗ trợ hosting nhỏ.
-
-6. MỘT SỐ DỊCH VỤ TRỰC TUYẾN PHỔ BIẾN
---------------------------------------
-- GitHub Pages: miễn phí, chất lượng tốt
-- Google App Engine: dùng cho cả web tĩnh và web động
-- CodePen, JSFiddle, JS Bin: dùng để học và chia sẻ mã nhanh
-- Glitch, Scrimba: có tính năng cộng tác, chạy mã trực tiếp
+- Web IDE:
+  + CodePen, JSFiddle, JSBin, Glitch
+  + Dễ chia sẻ demo ngắn, không lưu file ảnh ngoài.

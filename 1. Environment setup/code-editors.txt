@@ -41,17 +41,3 @@ CODE EDITORS
      - Tìm "Default Formatter" → chọn Prettier.
      - Bật "Format On Save".
 
-- Thử nghiệm:
-  + Tạo file `test.js`.
-  + Dán đoạn mã không đẹp:
-    ```
-    function sayHello(name){const greeting = `Hello, ${name}!`; return greeting;}
-    ```
-  + Lưu lại → Prettier sẽ tự căn chỉnh lại cho đẹp mắt:
-    ```
-    function sayHello(name) {
-      const greeting = `Hello, ${name}!`;
-      return greeting;
-    }
-    ```
-
