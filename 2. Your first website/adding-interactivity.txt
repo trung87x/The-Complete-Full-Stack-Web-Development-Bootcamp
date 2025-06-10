@@ -1,28 +1,23 @@
-THÊM TÍNH TƯƠNG TÁC VỚI JAVASCRIPT
-===================================
+THÊM TƯƠNG TÁC CHO TRANG WEB BẰNG JAVASCRIPT
+=============================================
 
-1. JAVASCRIPT LÀ GÌ?
-----------------------
-- JavaScript là ngôn ngữ lập trình giúp trang web có thể **tương tác với người dùng**.
-- Dùng để kiểm tra form, đổi hình, xử lý nút bấm, tạo trò chơi, hoạt ảnh...
+1. THÊM TƯƠNG TÁC CHO DANH SÁCH
+- Mục tiêu: Click vào từng mục `<li>` để đánh dấu đã hoàn thành.
 
-Ví dụ: khi bạn click vào danh sách, mục đó sẽ được gạch ngang.
-
-2. MÃ VÍ DỤ CƠ BẢN
----------------------
 HTML:
-<p>Instructions for life:</p>
 <ul>
   <li>Eat</li>
   <li>Sleep</li>
   <li>Repeat</li>
 </ul>
 
+
 CSS:
 .done {
   color: darkseagreen;
   text-decoration: line-through solid black 2px;
 }
+
 
 JavaScript:
 const listItems = document.querySelectorAll("li");
@@ -39,24 +34,27 @@ listItems.forEach((item) => {
   item.addEventListener("click", toggleDone);
 });
 
-→ Khi click vào mục trong danh sách, nó đổi màu và gạch ngang (xong việc).
 
-3. “HELLO WORLD!” ĐƠN GIẢN
------------------------------
-a. Tạo thư mục: scripts  
-b. Tạo file: scripts/main.js  
-c. Trong index.html, thêm:
-   <script async src="scripts/main.js"></script>
++ Ghi chú:
+  - Sử dụng `forEach` để gắn sự kiện `click` cho từng item.
+  - Dùng class `.done` để thay đổi giao diện khi hoàn thành.
 
-d. Trong main.js, viết:
-   const myHeading = document.querySelector("h1");
-   myHeading.textContent = "Hello world!";
+2. THAY ĐỔI NỘI DUNG TIÊU ĐỀ
+- Mục tiêu: Đổi nội dung thẻ `<h1>` bằng JavaScript.
 
-→ Khi mở trang, tiêu đề <h1> sẽ đổi thành “Hello world!”
+JavaScript:
+const myHeading = document.querySelector("h1");
+myHeading.textContent = "Hello world!";
 
-4. ĐỔI HÌNH ẢNH KHI CLICK
----------------------------
-a. Trong main.js, thêm:
+
++ Ghi chú:
+  - `textContent` thay đổi nội dung văn bản.
+  - `querySelector("h1")` giúp chọn phần tử cần chỉnh sửa.
+
+3. THAY ĐỔI HÌNH ẢNH KHI CLICK
+- Mục tiêu: Nhấn vào ảnh để đổi giữa hai ảnh khác nhau.
+
+JavaScript:
 const myImage = document.querySelector("img");
 
 myImage.addEventListener("click", () => {
@@ -68,21 +66,26 @@ myImage.addEventListener("click", () => {
   }
 });
 
-→ Khi người dùng click ảnh, hình sẽ thay đổi qua lại.
 
-5. TẠO THÔNG ĐIỆP CHÀO MỪNG
-------------------------------
-a. Trong index.html, thêm:
-   <button>Change user</button>
++ Ghi chú:
+  - Dùng `getAttribute()` để lấy đường dẫn hiện tại.
+  - Dùng `setAttribute()` để thay đổi ảnh hiển thị.
 
-b. Trong main.js, thêm:
+4. CÁ NHÂN HOÁ LỜI CHÀO NGƯỜI DÙNG
+- Mục tiêu: Hiển thị tên người dùng được nhập và lưu lại.
+
+HTML:
+<button>Change user</button>
+
+
+JavaScript:
 let myButton = document.querySelector("button");
 let myHeading = document.querySelector("h1");
 
 function setUserName() {
   const myName = prompt("Please enter your name.");
   if (!myName) {
-    setUserName();
+    setUserName(); // gọi lại nếu trống
   } else {
     localStorage.setItem("name", myName);
     myHeading.textContent = `Mozilla is cool, ${myName}`;
@@ -100,13 +103,15 @@ myButton.addEventListener("click", () => {
   setUserName();
 });
 
-→ Khi mở trang, trình duyệt hỏi tên → hiện tên trong tiêu đề.
-→ Dữ liệu lưu lại dù bạn tắt/truy cập lại.
 
-6. CÁC KHÁI NIỆM QUAN TRỌNG
-------------------------------
-- **Biến (variable)**: lưu trữ dữ liệu tạm thời
-- **Sự kiện (event)**: hành động như “click” hay “di chuột”
-- **Hàm (function)**: đoạn mã có thể gọi lại nhiều lần
-- **Điều kiện (if...else)**: kiểm tra và chạy mã theo kết quả
-- **localStorage**: lưu dữ liệu trong trình duyệt
++ Ghi chú:
+  - Dữ liệu được lưu bằng `localStorage` nên vẫn còn sau khi reload.
+  - `prompt()` cho phép người dùng nhập dữ liệu.
+  - Gọi lại `setUserName()` nếu giá trị nhập trống hoặc ấn Cancel.
+
+5. GHI NHỚ CÁC CẤU TRÚC TƯƠNG TÁC THƯỜNG DÙNG
+- `addEventListener("click", ...)`: lắng nghe sự kiện người dùng.
+- `querySelector("tag")`: chọn phần tử trong DOM.
+- `getAttribute()` / `setAttribute()`: lấy và đặt thuộc tính HTML.
+- `textContent`: chỉnh sửa nội dung chữ.
+- `localStorage.setItem()` / `getItem()`: lưu và truy xuất dữ liệu trình duyệt.
