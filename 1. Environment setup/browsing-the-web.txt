@@ -1,73 +1,51 @@
-DUYỆT WEB VÀ TÌM KIẾM THÔNG TIN TRÊN INTERNET
-=============================================
+BROWSING THE WEB
+================
 
 1. CÁC KHÁI NIỆM CƠ BẢN
-------------------------
-- Web page: Trang web (file HTML), hiển thị được trên trình duyệt.
-- Website: Tập hợp nhiều web page, có cùng tên miền.
-- Web server: Máy chủ lưu trữ website.
-- Web service: Dịch vụ web như đăng nhập, dự báo thời tiết, xử lý ảnh...
-- Search engine: Công cụ tìm kiếm như Google, Bing, DuckDuckGo.
+- Web page (trang web): Tài liệu HTML hiển thị trên trình duyệt. Có thể chứa:
+  + Thông tin định dạng (CSS)
+  + Tập lệnh (JavaScript)
+  + Hình ảnh, âm thanh, video
+- Website: Tập hợp các trang web liên kết với nhau, chia sẻ cùng tên miền.
+- Web server: Máy tính lưu trữ các trang web và gửi chúng đến trình duyệt khi được yêu cầu.
+- Web service: Phần mềm cung cấp chức năng/dữ liệu qua internet. Ví dụ:
+  + Dịch vụ đăng nhập
+  + Nén ảnh
+  + Dự báo thời tiết
+- Search engine (công cụ tìm kiếm): Trang web giúp bạn tìm các trang web khác. Ví dụ: Google, Bing, DuckDuckGo.
 
-So sánh với thư viện:
-- Web server = thư viện
-- Website = khu sách (khoa học, lịch sử...)
-- Web page = quyển sách
-- Search engine = mục lục thư viện
+2. CÁCH TÌM KIẾM THÔNG TIN
+- Với kiến thức:
+  + Tìm theo từ khóa tính năng (ví dụ: `fetch()`, `box model`, `video element`) trên MDN.
+- Với vấn đề cụ thể:
+  + Tìm theo câu hỏi trên StackOverflow hoặc Google.
+  + Ví dụ: `how to print fibonacci sequence in JavaScript`
 
-2. PHÂN BIỆT TRÌNH DUYỆT VÀ CÔNG CỤ TÌM KIẾM
---------------------------------------------
-- Trình duyệt (browser): Phần mềm như Chrome, Firefox, Safari... dùng để xem web.
-- Công cụ tìm kiếm (search engine): Website giúp tìm nội dung web (Google, Bing...)
+- Hành động:
+  a. Thử tra cứu một số từ khóa kỹ thuật.
+  b. Tìm cách giải bài toán lập trình cụ thể.
 
-Lưu ý: Nhiều người nhầm lẫn vì khi mở trình duyệt sẽ thấy ô tìm kiếm của Google, nhưng đây là 2 thứ khác nhau.
+3. SỬ DỤNG AI ĐỂ TÌM KIẾM
+- AI có thể giúp:
+  + Tìm lỗi trong đoạn mã.
+  + Tối ưu đoạn mã.
+  + Gợi ý cách tiếp cận giải quyết vấn đề.
+- AI có thể:
+  + Trả lời sai hoặc mâu thuẫn.
+  + Trích thông tin lỗi từ nguồn cũ hoặc không chính xác.
+- Lời khuyên:
+  + Bạn vẫn cần hiểu logic và vai trò của đoạn mã.
+  + Luôn kiểm tra lại kết quả AI trả về.
+  + Học cách tự giải quyết trước khi tra cứu để rèn tư duy.
+- Công cụ phổ biến: ChatGPT, Gemini, Copilot
+- Hành động:
+  a. Thử đưa một đoạn mã lỗi vào AI và hỏi lỗi nằm ở đâu.
+  b. Thử yêu cầu AI viết lại một đoạn mã ngắn sao cho tối ưu hơn.
 
-3. CÁCH WEB HOẠT ĐỘNG (GIẢN LƯỢC)
-----------------------------------
-Khi bạn gõ địa chỉ vào trình duyệt:
-1. Trình duyệt gửi yêu cầu HTTP đến web server.
-2. Server phản hồi bằng nội dung (HTML, ảnh, CSS...).
-3. Trình duyệt nhận, phân tích và hiển thị.
-
-Một trang web thường là:
-- index.html (trang chính)
-- Các tài nguyên kèm theo: ảnh, file CSS, JS...
-
-4. CÁCH TÌM KIẾM THÔNG TIN HIỆU QUẢ
-------------------------------------
-- Tìm kiến thức chung: dùng MDN hoặc Google.
-  Ví dụ: tìm "box model", "fetch()", "video element" trên MDN.
-- Tìm cách giải bài toán cụ thể: dùng StackOverflow.
-  Ví dụ: "javascript fibonacci sequence", "check prime number JS".
-
-5. SỬ DỤNG TRÍ TUỆ NHÂN TẠO (AI) HỖ TRỢ
-----------------------------------------
-Các công cụ AI như:
-- ChatGPT
-- Google Gemini
-- Microsoft Copilot
-
-Có thể giúp:
-- Tìm lỗi trong code
-- Viết lại code cho tối ưu hơn
-- Giải thích thuật toán
-- Gợi ý hướng xử lý vấn đề
-
-⚠️ Lưu ý khi dùng AI:
-- Cần hiểu nội dung mình làm, không nên ỷ lại hoàn toàn.
-- AI có thể trả lời sai, không cập nhật thông tin mới nhất.
-- Luôn kiểm tra lại kết quả trước khi tin tưởng.
-
-6. MẸO TÌM KIẾM TỐT HƠN
-------------------------
-- Luôn ghi rõ ngôn ngữ khi tìm (vd: "fibonacci javascript").
-- Lưu lại những câu trả lời hay (bookmark hoặc copy).
-- Dán lỗi cụ thể vào tìm kiếm để tìm hướng giải quyết.
-- Ưu tiên dùng trang uy tín: MDN, StackOverflow...
-
-Một số kỹ thuật nâng cao:
-- "ant fish cheese": tìm đúng cụm từ.
-- "ant cheese" -fish: có ant hoặc cheese, không có fish.
-- ant OR cheese: tìm ant hoặc cheese.
-- intitle:cheese: tìm trang có chữ "cheese" trong tiêu đề.
+4. MẸO TÌM KIẾM HIỆU QUẢ
+- Một số cú pháp tìm kiếm nâng cao:
+  + `"exact phrase"` → tìm đúng cụm từ
+  + `term1 -term2` → loại trừ từ khóa thứ hai
+  + `intitle:term` → tìm từ trong tiêu đề
+  + `term1 OR term2` → tìm 1 trong 2 từ (chỉ Google hỗ trợ tốt)
 
