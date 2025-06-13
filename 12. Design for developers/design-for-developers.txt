@@ -1,4 +1,5 @@
-= THIẾT KẾ DÀNH CHO LẬP TRÌNH VIÊN =
+THIẾT KẾ DÀNH CHO LẬP TRÌNH VIÊN
+================================
 
 1. Mục tiêu
 - Giúp lập trình viên hiểu tư duy thiết kế mà không cần trở thành designer.
