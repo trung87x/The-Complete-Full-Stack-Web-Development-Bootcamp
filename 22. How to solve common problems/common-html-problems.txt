@@ -1,0 +1,65 @@
+Solve common HTML problems
+The following links point to solutions to common everyday problems you'll need to solve with HTML.
+
+Basic structure
+The most basic application of HTML is document structure. If you're new to HTML you should start with this.
+
+How to create a basic HTML document
+How to divide a webpage into logical sections
+How to set up a proper structure of headings and paragraphs
+Basic text-level semantics
+HTML specializes in providing semantic information for a document, so HTML answers many questions you might have about how to get your message across best in your document.
+
+How to create a list of items with HTML
+How to stress or emphasize content
+How to indicate that text is important
+How to display computer code with HTML
+How to annotate images and graphics
+How to mark abbreviations and make them understandable
+How to add quotations and citations to web pages
+How to define terms with HTML
+Hyperlinks
+One of the main reasons for HTML is making navigation easy with hyperlinks, which can be used in many different ways:
+
+How to create a link
+How to create a table of contents with HTML
+Images & multimedia
+How to add images to a webpage
+How to add video content to a webpage
+Scripting & styling
+HTML only sets up document structure. To solve presentation issues, use CSS, or use scripting to make your page interactive.
+
+How to use CSS within a webpage
+How to use JavaScript within a webpage
+Embedded content
+How to embed a webpage within another webpage
+Uncommon or advanced problems
+Beyond the basics, HTML is very rich and offers advanced features for solving complex problems. These articles help you tackle the less common use cases you may face:
+
+Forms
+Forms are a complex HTML structure made to send data from a webpage to a web server. We encourage you to go over our full dedicated guide. Here is where you should start:
+
+How to create a simple Web form
+How to structure a Web form
+Tabular information
+Some information, called tabular data, needs to be organized into tables with columns and rows. It's one of the most complex HTML structures, and mastering it is not easy:
+
+How to create a data table
+How to make HTML tables accessible
+Data representation
+How to represent numeric and code values with HTML — see Superscript and Subscript, and Representing computer code.
+How to use data attributes
+Advanced text semantics
+How to take control of HTML line breaking
+How to mark changes (added and removed text) — see the <ins> and <del> elements.
+Advanced images & multimedia
+How to add a responsive image to a webpage
+How to add vector image to a webpage
+How to add a hit map on top of an image
+Internationalization
+HTML is not monolingual. It provides tools to handle common internationalization issues.
+
+How to add multiple languages into a single webpage
+How to display time and date with HTML
+Performance
+How to author fast-loading HTML pages
