@@ -6,104 +6,109 @@
 
 function App(props) {
   return (
-    <div className="todoapp stack-large">
-      <h1>TodoMatic</h1>
-      <form>
-        <h2 className="label-wrapper">
-          <label htmlFor="new-todo-input" className="label__lg">
+    <div className="container mt-5 w-50">
+      <h1 className="text-center mb-4">TodoMatic</h1>
+
+      <form className="mb-4">
+        <div className="mb-3">
+          <label htmlFor="new-todo-input" className="form-label">
             What needs to be done?
           </label>
-        </h2>
-        <input
-          type="text"
-          id="new-todo-input"
-          className="input input__lg"
-          name="text"
-          autoComplete="off"
-        />
-        <button type="submit" className="btn btn__primary btn__lg">
+          <input
+            type="text"
+            id="new-todo-input"
+            className="form-control"
+            placeholder="Enter a task"
+            autoComplete="off"
+          />
+        </div>
+        <button type="submit" className="btn btn-primary w-100">
           Add
         </button>
       </form>
 
-      <div className="filters btn-group stack-exception">
-        <button type="button" className="btn toggle-btn" aria-pressed="true">
-          <span className="visually-hidden">Show </span>
-          <span>all</span>
-          <span className="visually-hidden"> tasks</span>
+      <div
+        className="btn-group d-flex justify-content-center mb-4"
+        role="group"
+      >
+        <button type="button" className="btn btn-outline-secondary active">
+          All
         </button>
-        <button type="button" className="btn toggle-btn" aria-pressed="false">
-          <span className="visually-hidden">Show </span>
-          <span>Active</span>
-          <span className="visually-hidden"> tasks</span>
+        <button type="button" className="btn btn-outline-secondary">
+          Active
         </button>
-        <button type="button" className="btn toggle-btn" aria-pressed="false">
-          <span className="visually-hidden">Show </span>
-          <span>Completed</span>
-          <span className="visually-hidden"> tasks</span>
+        <button type="button" className="btn btn-outline-secondary">
+          Completed
         </button>
       </div>
 
-      <h2 id="list-heading">3 tasks remaining</h2>
-      <ul
-        role="list"
-        className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-0" type="checkbox" defaultChecked />
-            <label className="todo-label" htmlFor="todo-0">
+      <h2 className="mb-3">3 tasks remaining</h2>
+
+      <ul className="list-group">
+        {/* Task 1 */}
+        <li className="list-group-item d-flex justify-content-between align-items-center">
+          <div className="form-check">
+            <input
+              className="form-check-input me-2"
+              type="checkbox"
+              id="todo-0"
+              defaultChecked
+            />
+            <label className="form-check-label" htmlFor="todo-0">
               Eat
             </label>
           </div>
-          <div className="btn-group">
-            <button type="button" className="btn">
-              Edit <span className="visually-hidden">Eat</span>
+          <div>
+            <button className="btn btn-sm btn-outline-secondary me-2">
+              Edit
             </button>
-            <button type="button" className="btn btn__danger">
-              Delete <span className="visually-hidden">Eat</span>
-            </button>
+            <button className="btn btn-sm btn-danger">Delete</button>
           </div>
         </li>
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-1" type="checkbox" />
-            <label className="todo-label" htmlFor="todo-1">
+
+        {/* Task 2 */}
+        <li className="list-group-item d-flex justify-content-between align-items-center">
+          <div className="form-check">
+            <input
+              className="form-check-input me-2"
+              type="checkbox"
+              id="todo-1"
+            />
+            <label className="form-check-label" htmlFor="todo-1">
               Sleep
             </label>
           </div>
-          <div className="btn-group">
-            <button type="button" className="btn">
-              Edit <span className="visually-hidden">Sleep</span>
+          <div>
+            <button className="btn btn-sm btn-outline-secondary me-2">
+              Edit
             </button>
-            <button type="button" className="btn btn__danger">
-              Delete <span className="visually-hidden">Sleep</span>
-            </button>
+            <button className="btn btn-sm btn-danger">Delete</button>
           </div>
         </li>
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-2" type="checkbox" />
-            <label className="todo-label" htmlFor="todo-2">
+
+        {/* Task 3 */}
+        <li className="list-group-item d-flex justify-content-between align-items-center">
+          <div className="form-check">
+            <input
+              className="form-check-input me-2"
+              type="checkbox"
+              id="todo-2"
+            />
+            <label className="form-check-label" htmlFor="todo-2">
               Repeat
             </label>
           </div>
-          <div className="btn-group">
-            <button type="button" className="btn">
-              Edit <span className="visually-hidden">Repeat</span>
+          <div>
+            <button className="btn btn-sm btn-outline-secondary me-2">
+              Edit
             </button>
-            <button type="button" className="btn btn__danger">
-              Delete <span className="visually-hidden">Repeat</span>
-            </button>
+            <button className="btn btn-sm btn-danger">Delete</button>
           </div>
         </li>
       </ul>
     </div>
   );
 }
-
-export default App;
 
 /* === 2. Ghi chú thêm về accessibility ===
 - `aria-pressed` giúp screen reader hiểu trạng thái button: true/false.
@@ -114,13 +119,14 @@ export default App;
 → Các cải tiến này giúp app thân thiện với người dùng dùng thiết bị hỗ trợ.
 */
 
-/* === 3. CSS cơ bản được chèn ở index.css
-→ File style đã có sẵn hướng dẫn, bạn có thể copy paste đoạn CSS vào index.css.
-→ Các class như .btn, .stack-large, .visually-hidden… sẽ hoạt động sau khi thêm CSS.
+/* === 3. Cài đặt và sử dụng Bootstrap 5
+- `npm install bootstrap` Cài Bootstrap 5.
+- `import 'bootstrap/dist/css/bootstrap.min.css';` Import trong main.jsx hoặc index.js.
 */
 
 /* === 4. Ghi chú triển khai ===
 - Nếu dùng Vite:
+    + xóa nội dung index.css
     + xóa App.css, react.svg và reset nội dung App.jsx theo hướng dẫn.
     + chạy lại với: npm run dev
 - Sửa <title> trong index.html thành "TodoMatic".
