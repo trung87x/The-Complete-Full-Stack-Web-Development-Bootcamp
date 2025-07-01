@@ -1,66 +1,39 @@
-Perceived performance
-Previous
-Overview: Web performance
-Next
-Perceived performance is a subjective measure of website performance, responsiveness, and reliability. In other words, how fast a website seems to the user. It is harder to quantify and measure than the actual speed of operation, but perhaps even more important.
 
-This article provides a brief introduction to the factors that affect perceived performance, along with a number of tools for assessing and improving the perception.
+### Hiệu Suất Cảm Nhận (Perceived Performance)
 
-Prerequisites:	Basic software installed, and basic knowledge of client-side web technologies.
-Objective:	To gain basic familiarity of user perception of web performance.
-Overview
-The perception of how quickly (and smoothly) pages load and respond to user interaction is even more important than the actual time required to fetch the resources. While you may not be able to physically make your site run faster, you may well be able to improve how fast it feels for your users.
+**Hiệu suất cảm nhận là gì?**
+Hiệu suất cảm nhận là thước đo chủ quan về hiệu suất, khả năng phản hồi và độ tin cậy của một website. Nó mô tả cách mà website "cảm nhận" với người dùng, hoặc nói cách khác là tốc độ cảm nhận của người dùng khi truy cập một website. Mặc dù không thể đo lường chính xác như thời gian tải tài nguyên thực tế, hiệu suất cảm nhận lại cực kỳ quan trọng vì nó ảnh hưởng trực tiếp đến trải nghiệm người dùng.
 
-A good general rule for improving perceived performance is that it is usually better to provide a quick response and regular status updates than make the user wait until an operation fully completes (before providing any information). For example, when loading a page it is better to display the text when it arrives rather than wait for all the images and other resources. Even though the content has not fully downloaded the user can see something is happening and they can start interacting with the content.
+**Lý do tại sao hiệu suất cảm nhận lại quan trọng?**
+Thực tế là thời gian mà người dùng cảm nhận được khi tải trang web và tương tác với các yếu tố của trang có thể ảnh hưởng đến cách họ đánh giá website. Dù bạn không thể làm cho website chạy nhanh hơn, nhưng bạn có thể cải thiện cảm nhận của người dùng về tốc độ bằng cách tối ưu hóa cách thức và thời gian hiển thị của các yếu tố trong trang.
 
-Note: Time appears to pass more quickly for users who are actively engaged, distracted, or entertained, than for those who are waiting passively for something to happen. Where possible, actively engage and inform users who are waiting for a task to complete.
+**Một quy tắc chung để cải thiện hiệu suất cảm nhận là gì?**
+Quy tắc chung là thay vì khiến người dùng chờ đợi cho đến khi một tác vụ hoàn tất, hãy cung cấp phản hồi nhanh chóng và cập nhật trạng thái thường xuyên. Ví dụ, khi tải trang, thay vì đợi tất cả hình ảnh và tài nguyên tải xong, bạn có thể hiển thị nội dung văn bản ngay khi nó tải về. Điều này giúp người dùng thấy có sự chuyển động và cảm giác rằng trang web đang hoạt động, thay vì chỉ thấy trang web "trống rỗng".
 
-Similarly, it is better to display a "loading animation" as soon as a user clicks a link to perform a long-running operation. While this doesn't change the time taken to complete the operation, the site feels more responsive, and the user knows that it is working on something useful.
+**Ví dụ về cải thiện hiệu suất cảm nhận**
+- **Hiển thị văn bản trước**: Khi trang web tải, hiển thị văn bản ngay lập tức thay vì đợi tất cả tài nguyên (hình ảnh, CSS, JavaScript) tải xong.
+- **Hiển thị "loading animation"**: Cung cấp một hoạt ảnh loading cho người dùng khi họ click vào liên kết hoặc bắt đầu một tác vụ dài.
 
-Performance metrics
-There is no single metric or test that can be run on a site to evaluate how a user "feels". However, there are a number of metrics that can be "helpful indicators":
+**Các chỉ số hiệu suất cảm nhận**
+Mặc dù không có một chỉ số cụ thể nào có thể đánh giá chính xác hiệu suất cảm nhận, có một số chỉ số có thể giúp bạn đánh giá mức độ cảm nhận của người dùng:
 
-First Paint
-The time to start of first paint operation. Note that this change may not be visible; it can be a simple background color update or something even less noticeable.
+1. **First Paint (FP)**: Thời gian đầu tiên mà trang bắt đầu được hiển thị (có thể chỉ là màu nền hoặc thay đổi nhỏ).
+2. **First Contentful Paint (FCP)**: Thời gian đến khi nội dung quan trọng (ví dụ: văn bản, hình ảnh nền, v.v.) bắt đầu hiển thị.
+3. **First Meaningful Paint (FMP)**: Thời gian khi nội dung hữu ích đầu tiên được render lên màn hình.
+4. **Largest Contentful Paint (LCP)**: Thời gian render phần tử lớn nhất (ví dụ: hình ảnh, đoạn văn bản) có thể nhìn thấy trong viewport.
+5. **Speed Index**: Đo thời gian trung bình để các pixel hiển thị trên màn hình.
+6. **Time to Interactive (TTI)**: Thời gian cho đến khi UI của trang web có thể tương tác với người dùng (hoàn thành tất cả các tác vụ tải lâu dài).
 
-First Contentful Paint (FCP)
-The time until first significant rendering (e.g., of text, foreground or background image, canvas or SVG, etc.). Note that this content is not necessarily useful or meaningful.
+**Cải thiện hiệu suất cảm nhận**
+Dưới đây là một số mẹo để cải thiện hiệu suất cảm nhận:
 
-First Meaningful Paint (FMP)
-The time at which useful content is rendered to the screen.
+1. **Giảm thời gian tải ban đầu**: Đảm bảo rằng bạn tải các tài nguyên quan trọng trước (như văn bản, CSS và hình ảnh hiển thị đầu tiên) và tải các tài nguyên không quan trọng sau khi trang đã hiển thị.
+2. **Chia nhỏ nội dung tương tác với nội dung**: Tối ưu hóa tải tài nguyên để đảm bảo rằng chỉ những phần có thể tương tác được tải trước, trong khi các phần không quan trọng có thể tải sau.
+3. **Tránh tình trạng "content jump"**: Đảm bảo rằng nội dung không bị dịch chuyển hoặc thay đổi vị trí khi tải các tài nguyên khác. Ví dụ, nếu bạn đang tải quảng cáo hoặc hình ảnh bên ngoài, bạn có thể để dành không gian cho chúng trước khi tải.
+4. **Tránh chậm trễ khi tải phông chữ**: Đảm bảo rằng phông chữ được tải nhanh chóng, tránh các vấn đề "flickering" khi chuyển đổi từ phông chữ dự phòng sang phông chữ chính thức.
 
-Largest Contentful Paint (LCP)
-The render time of the largest content element visible in the viewport.
+**Tối ưu hóa các yếu tố tương tác**
+- Đảm bảo rằng các yếu tố tương tác (như trường nhập liệu và nút) luôn có thể tương tác ngay lập tức. Người dùng sẽ cảm thấy trang web có độ trễ nếu các yếu tố này phản hồi lâu hơn 50ms.
 
-Speed index
-Measures the average time for pixels on the visible screen to be painted.
-
-Time to interactive
-Time until the UI is available for user interaction (i.e., the last long task of the load process finishes).
-
-Improving performance
-Here are a few tips and tricks to help improve perceived performance:
-
-Minimize initial load
-To improve perceived performance, minimize the original page load. In other words, download the content the user is going to interact with immediately first, and download the rest after "in the background". The total amount of content downloaded may actually increase, but the user only waits on a very small amount, so the download feels faster.
-
-Separate interactive functionality from content, and load text, styles, and images visible at initial load. Delay, or lazy load, images or scripts that aren't used or visible on the initial page load. Additionally, you should optimize the assets you do load. Images and video should be served in the most optimal format, compressed, and in the correct size.
-
-Prevent jumping content and other reflows
-Images or other assets causing content to be pushed down or jump to a different location, like the loading of third party advertisements, can make the page feel like it is still loading and is bad for perceived performance. Content reflowing is especially bad for user experience when not initiated by user interaction. If some assets are going to be slower to load than others, with elements loading after other content has already been painted to the screen, plan ahead and leave space in the layout for them so that content doesn't jump or resize, especially after the site has become interactive.
-
-Avoid font file delays
-Font choice is important. Selecting an appropriate font can greatly improve the user experience. From a perceived performance point of view, "suboptimal fonts importing" can result in flicker as text is styled or when falling back to other fonts.
-
-Make fallback fonts the same size and weight so that when fonts load the page change is less noticeable.
-
-Interactive elements are interactive
-Make sure visible interactive elements are always interactive and responsive. If input elements are visible, the user should be able to interact with them without a lag. Users feel that something is laggy when they take more than 50ms to react. They feel that a page is behaving poorly when content repaints slower than 16.67ms (or 60 frames per second) or repaints at uneven intervals.
-
-Make things like type-ahead a progressive enhancement: use CSS to display input modal, JS to add autocomplete as it is available
-
-Make task initiators appear more interactive
-Making a content request on keydown rather than waiting for keyup can reduce the perceived load time of the content by 200ms. Adding an interesting but unobtrusive 200ms animation to that keyup event can reduce another 200ms of the perceived load. You're not saving 400ms of time, but the user doesn't feel like they're waiting for content until, well, until they're waiting for content.
-
-Conclusion
-By reducing the time that a user has to wait for useful content, and keeping the site responsive and engaging, the users will feel like the site performs better — even the actual time to load resources stays the same.
+**Tóm tắt**
+Hiệu suất cảm nhận có thể quan trọng hơn nhiều so với tốc độ tải thực tế của một website. Việc giảm thời gian mà người dùng phải chờ đợi để thấy nội dung hữu ích và giữ cho trang web phản hồi nhanh chóng sẽ giúp cải thiện cảm nhận về hiệu suất. Các kỹ thuật như tối ưu hóa tải trang ban đầu, giảm thiểu "content jump", và cải thiện tốc độ phông chữ đều giúp nâng cao hiệu suất cảm nhận của trang web.

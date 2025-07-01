@@ -1,32 +1,44 @@
-What is web performance?
-Previous
-Overview: Web performance
-Next
-Web performance is all about making websites fast, including making slow processes seem fast. Does the site load quickly, allow the user to start interacting with it quickly, and offer reassuring feedback if something is taking time to load (e.g., a loading spinner)? Are scrolling and animations smooth? This article provides a brief introduction to objective, measurable web performance*, looking at what technologies, techniques, and tools are involved in web optimization.
+Hiệu suất web là gì?
 
-Prerequisites:	Basic software installed, and basic knowledge of client-side web technologies.
-Objective:	To gain basic familiarity of what is involved with web performance.
-* versus subjective, perceived performance, covered in the next article
+**Hiệu suất web** là một khái niệm liên quan đến cách đo lường khách quan và trải nghiệm người dùng khi sử dụng một trang web hoặc ứng dụng. Bài viết này cung cấp một cái nhìn tổng quan về các yếu tố cấu thành hiệu suất web, bao gồm những công nghệ, kỹ thuật và công cụ được sử dụng để tối ưu hóa trang web.
 
-What is web performance?
-Web performance is the objective measurement and perceived user experience of a website or application. This includes the following major areas:
+### **Hiệu suất web là gì?**
+Hiệu suất web bao gồm việc đo lường thời gian trang web tải và render, cũng như khả năng phản hồi khi người dùng tương tác. Đây là những yếu tố quan trọng ảnh hưởng trực tiếp đến trải nghiệm người dùng và mục tiêu kinh doanh.
 
-Reducing overall load time: How long does it take the files required to render the website to download on to the user's computer? This tends to be affected by latency, how big your files are, how many files there are, and other factors besides. A general strategy is to make your files as small as possible, reduce the number of HTTP requests made as much as possible, and employ clever loading techniques (such as preload) to make files available sooner.
-Making the site usable as soon as possible: This basically means loading your website assets in a sensible order so that the user can start to actually use it really quickly. Any other assets can continue to load in the background while the user gets on with primary tasks, and sometimes we only load assets when they are actually needed (this is called lazy loading). The measurement of how long it takes the site to get to a usable start after it has started loading is called time to interactive.
-Smoothness and interactivity: Does the application feel reliable and pleasurable to use? Is the scrolling smooth? Are buttons clickable? Are pop-ups quick to open up, and do they animate smoothly as they do so? There are a lot of best practices to consider in making apps feel smooth, for example using CSS animations rather than JavaScript for animation, and minimizing the number of repaints the UI requires due to changes in the DOM.
-Perceived performance: How fast a website seems to the user has a greater impact on user experience than how fast the website actually is. How a user perceives your performance is as important, or perhaps more important, than any objective statistic, but it's subjective, and not as readily measurable. Perceived performance is user perspective, not a metric. Even if an operation is going to take a long time (because of latency or whatever), it is possible to keep the user engaged while they wait by showing a loading spinner, or a series of useful hints and tips (or jokes, or whatever else you think might be appropriate). Such an approach is much better than just showing nothing, which will make it feel like it is taking a lot longer and possibly lead to your users thinking it is broken and giving up.
-Performance measurements: Web performance involves measuring the actual and perceived speeds of an application, optimizing where possible, and then monitoring the performance, to ensure that what you've optimized stays optimized. This involves a number of metrics (measurable indicators that can indicate success or failure) and tools to measure those metrics, which we will discuss throughout this module.
-To summarize, many features impact performance including latency, application size, the number of DOM nodes, the number of resource requests made, JavaScript performance, CPU load, and more. It is important to minimize the loading and response times, and add additional features to conceal latency by making the experience as available and interactive as possible, as soon as possible, while asynchronously loading in the longer tail parts of the experience.
+Các yếu tố chính của hiệu suất web bao gồm:
 
-Note: Web performance includes both objective measurements like time to load, frames per second, and time to interactive, and subjective experiences of how long it felt like it took the content to load.
+1. **Giảm thời gian tải chung**: Thời gian tải trang web, bao gồm thời gian tải các tệp từ máy chủ đến máy tính của người dùng. Các yếu tố ảnh hưởng bao gồm độ trễ mạng, kích thước tệp, số lượng tệp, và cách tải tài nguyên (như `preload`).
 
-How content is rendered
-To effectively understand web performance, the issues behind it, and the major topic areas we mentioned above, you really should understand some specifics about how browsers work. This includes:
+2. **Đảm bảo trang web có thể sử dụng ngay lập tức**: Cung cấp một cách tiếp cận hợp lý để tải tài nguyên theo thứ tự sao cho người dùng có thể bắt đầu tương tác với trang ngay khi có thể, trong khi các tài nguyên khác có thể tiếp tục tải trong nền. Một chỉ số đo lường việc này là **time to interactive** (từ khi trang bắt đầu tải đến khi người dùng có thể tương tác).
 
-How the browser works. When you request a URL and hit Enter / Return, the browser finds out where the server is that holds that website's files, establishes a connection to it, and requests the files. See Populating the page: how the browser works for a detailed overview.
-Source order. Your HTML index file's source order can significantly affect performance. The download of additional assets linked to from the index file is generally sequential, based on source order, but this can be manipulated and should definitely be optimized, realizing that some resources block additional downloads until their content is parsed and executed.
-The critical path. This is the process that the browser uses to construct the web document once the files have been downloaded from the server. The browser follows a well-defined set of steps, and optimizing the critical rendering path to prioritize the display of content that relates to the current user action will lead to significant improvements in content rendering time. See Critical rendering path for more information.
-The document object model. The document object model, or DOM, is a tree structure that represents the content and elements of your HTML as a tree of nodes. This includes all the HTML attributes and the relationships between the nodes. Extensive DOM manipulation after the pages has loaded (e.g., adding, deleting, or moving of nodes) can affect performance, so it is worth understanding how the DOM works, and how such issues can be mitigated. Find out more at Document Object Model.
-Latency. We mention this briefly earlier on, but in brief, latency is the time it takes for your website assets to travel from the server to a user's computer. There is overhead involved in establishing TCP and HTTP connections, and some unavoidable latency in pushing the request and response bytes back and forth across the network, but there are certain ways to reduce latency (e.g., reducing the number of HTTP request you make by downloading fewer files, using a CDN to make your site more universally performant across the world, and using HTTP/2 to serve files more efficiently from the server). You can read all about this topic at Understanding Latency.
-Conclusion
-That's it for now; we hope our brief overview of the web performance topic helped you to get an idea of what it is all about, and made you excited to learn more. Next up we'll look at perceived performance, and how you can use some clever techniques to make some unavoidable performance hits appear less severe to the user, or disguise them completely.
+3. **Mượt mà và khả năng tương tác**: Đảm bảo trải nghiệm người dùng mượt mà và không bị giật, các nút có thể nhấp, và các pop-up xuất hiện nhanh chóng và mượt mà. Việc giảm số lần tái vẽ giao diện (repaint) và sử dụng **CSS animations** thay vì JavaScript animations là một số thực hành tốt để cải thiện yếu tố này.
+
+4. **Hiệu suất cảm nhận**: Hiệu suất cảm nhận là cảm nhận của người dùng về tốc độ tải trang web, ảnh hưởng đến trải nghiệm của họ. Đây là một yếu tố chủ quan, nhưng việc cung cấp phản hồi cho người dùng, như spinner tải hoặc thông báo trạng thái tải, có thể giúp họ cảm thấy thời gian chờ đợi ngắn hơn và trang không bị "hỏng".
+
+5. **Đo lường hiệu suất**: Đo lường hiệu suất là quá trình theo dõi các chỉ số và sử dụng các công cụ để đo lường tốc độ thực tế và cảm nhận của ứng dụng, từ đó tối ưu hóa hiệu suất và duy trì nó.
+
+### **Các yếu tố ảnh hưởng đến hiệu suất web**:
+- **Độ trễ**: Là thời gian để tải tài nguyên của trang từ máy chủ đến máy của người dùng. Để giảm độ trễ, có thể giảm số lượng yêu cầu HTTP, sử dụng **CDN** (Content Delivery Network), và áp dụng **HTTP/2** để cải thiện hiệu quả tải tài nguyên từ máy chủ.
+  
+- **Kích thước tệp**: Các tệp lớn như hình ảnh và video có thể làm tăng thời gian tải trang. Do đó, việc giảm kích thước tệp hoặc tối ưu hóa chúng sẽ giúp giảm thiểu thời gian tải.
+
+- **Số lượng yêu cầu tài nguyên**: Mỗi yêu cầu HTTP đến máy chủ sẽ tốn thời gian. Việc giảm số lượng yêu cầu hoặc sử dụng các kỹ thuật như **bundling** và **minification** (nén mã) có thể giúp giảm thiểu số lượng yêu cầu và cải thiện hiệu suất.
+
+- **Hiệu suất JavaScript**: JavaScript là một yếu tố quan trọng ảnh hưởng đến hiệu suất. Việc tối ưu hóa mã JavaScript, giảm thiểu các tác vụ nặng và thực hiện chúng ngoài luồng chính (sử dụng **Web Workers**) sẽ giúp cải thiện hiệu suất trang web.
+
+- **Tải tài nguyên theo thứ tự hợp lý**: Tải tài nguyên quan trọng như CSS và JavaScript cần thiết cho việc render trang trước các tài nguyên ít quan trọng hơn, điều này sẽ giúp trang tải nhanh hơn và sớm có thể tương tác được.
+
+### **Cách nội dung được render trong trình duyệt**:
+Để hiểu rõ về hiệu suất web, bạn cần hiểu cách mà trình duyệt render (hiển thị) nội dung:
+
+1. **Thứ tự nguồn**: Trình duyệt tải tài nguyên theo thứ tự trong mã HTML, ảnh hưởng đến thời gian hiển thị trang. Tối ưu thứ tự tài nguyên và sử dụng kỹ thuật `preload` có thể giúp giảm thời gian tải.
+
+2. **Critical Path**: Đây là quá trình trình duyệt sử dụng để xây dựng tài liệu web sau khi các tệp đã được tải từ máy chủ. Tối ưu hóa đường dẫn render giúp cải thiện thời gian hiển thị nội dung và tăng tốc độ tải trang.
+
+3. **Document Object Model (DOM)**: DOM là cấu trúc cây đại diện cho các phần tử HTML của trang web. Manipulating DOM quá nhiều sau khi tải trang có thể làm giảm hiệu suất, do đó cần phải tối ưu hóa việc thay đổi DOM để giảm tác động đến hiệu suất.
+
+4. **Độ trễ (Latency)**: Độ trễ là thời gian cần thiết để tài nguyên từ máy chủ đến người dùng. Việc giảm độ trễ là một yếu tố quan trọng để tối ưu hiệu suất, có thể sử dụng **CDN**, giảm số lượng yêu cầu HTTP và áp dụng HTTP/2 để giảm độ trễ.
+
+### **Kết luận**:
+Hiệu suất web có ảnh hưởng trực tiếp đến trải nghiệm người dùng. Việc tối ưu hiệu suất sẽ giúp giảm thời gian tải trang, làm cho người dùng có thể tương tác sớm hơn và trải nghiệm trang web mượt mà hơn. Các yếu tố như độ trễ, kích thước tệp, số lượng yêu cầu HTTP, hiệu suất JavaScript và DOM đều cần được tối ưu hóa để cải thiện hiệu suất tổng thể của trang web.
+

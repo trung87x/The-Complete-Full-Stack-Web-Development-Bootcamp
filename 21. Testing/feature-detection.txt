@@ -1,69 +1,46 @@
-Implementing feature detection
-Previous
-Overview: Testing
-Next
-Feature detection involves working out whether a browser supports a certain block of code, and running different code depending on whether it does (or doesn't), so that the browser can always provide a working experience rather than crashing/erroring in some browsers. This article details how to write your own simple feature detection, how to use a library to speed up implementation, and native features for feature detection such as @supports.
 
-Prerequisites:	Familiarity with the core HTML, CSS, and JavaScript languages; an idea of the high-level principles of cross-browser testing.
-Objective:	To understand what the concept of feature detection is, and be able to implement suitable solutions in CSS and JavaScript.
-The concept of feature detection
-The idea behind feature detection is that you can run a test to determine whether a feature is supported in the current browser, and then conditionally run code to provide an acceptable experience both in browsers that do support the feature, and browsers that don't. If you don't do this, browsers that don't support the features you are using in your code may not display your sites properly or might fail altogether, creating a bad user experience.
+1. Kiểm tra tính năng (Feature Detection)  
+Kiểm tra tính năng liên quan đến việc kiểm tra xem trình duyệt có hỗ trợ một đoạn mã nhất định hay không và chạy mã khác nhau tùy thuộc vào việc nó có được hỗ trợ hay không. Điều này giúp tránh việc các trình duyệt không hỗ trợ tính năng gặp sự cố hoặc lỗi, đảm bảo trải nghiệm người dùng mượt mà hơn.
 
-Let's recap and look at the example we touched on in our JavaScript debugging and error handling article — the Geolocation API (which exposes available location data for the device the web browser is running on) has the main entry point for its use, a geolocation property available on the global Navigator object. Therefore, you can detect whether the browser supports geolocation or not by using something like the following:
+2. Khái niệm kiểm tra tính năng  
+Ý tưởng của kiểm tra tính năng là kiểm tra xem trình duyệt hiện tại có hỗ trợ tính năng đó hay không và sau đó điều kiện chạy mã phù hợp. Điều này đảm bảo tính năng hoạt động bình thường trên cả trình duyệt hỗ trợ và không hỗ trợ tính năng đó. Nếu không kiểm tra tính năng, các tính năng không được hỗ trợ có thể làm trang web bị lỗi hoặc không hiển thị đúng.
 
-js
-Copy to Clipboard
+Ví dụ (Geolocation API):
+```js
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition((position) => {
-    // show the location on a map, such as the Google Maps API
+    // Hiển thị vị trí trên bản đồ
   });
 } else {
-  // Give the user a choice of static maps
+  // Cung cấp bản đồ tĩnh như một phương án thay thế
 }
-Before we move on, we'd like to say one thing upfront — don't confuse feature detection with browser sniffing (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See Browser detection using the user agent string (UA sniffing) for more details.
+```
 
-Writing your own feature detection tests
-In this section, we'll look at implementing your own feature detection tests, in both CSS and JavaScript.
+3. Viết các bài kiểm tra tính năng của riêng bạn  
+Bạn có thể viết các bài kiểm tra tính năng cho cả CSS và JavaScript.
 
-CSS
-You can write tests for CSS features by testing for the existence of element.style.property (e.g., paragraph.style.rotate) in JavaScript.
-
-A classic example might be to test for Subgrid support in a browser; for browsers that support the subgrid value for a subgrid value for grid-template-columns and grid-template-rows, we can use subgrid in our layout. For browsers that don't, we could use regular grid that works fine but is not as cool-looking.
-
-Using this as an example, we could include a subgrid stylesheet if the value is supported and a regular grid stylesheet if not. To do so, we could include two stylesheets in the head of our HTML file: one for all the styling, and one that implements the default layout if subgrid is not supported:
-
-html
-Copy to Clipboard
+**Ví dụ với CSS:**
+Kiểm tra hỗ trợ Subgrid trong CSS:
+```html
 <link href="basic-styling.css" rel="stylesheet" />
 <link class="conditional" href="grid-layout.css" rel="stylesheet" />
-Here, basic-styling.css handles all the styling that we want to give to every browser. We have two additional CSS files, grid-layout.css and subgrid-layout.css, which contain the CSS we want to selectively apply to browsers depending on their support levels.
-
-We use JavaScript to test the support for the subgrid value, then update the href of our conditional stylesheet based on browser support.
-
-We can add a <script></script> to our document, filled with the following JavaScript
-
-js
-Copy to Clipboard
+```
+Trong JavaScript:
+```js
 const conditional = document.querySelector(".conditional");
 if (CSS.supports("grid-template-columns", "subgrid")) {
   conditional.setAttribute("href", "subgrid-layout.css");
 }
-In our conditional statement, we test to see if the grid-template-columns property supports the subgrid value using CSS.supports().
+```
 
-@supports
-CSS has a native feature detection mechanism: the @supports at-rule. This works in a similar manner to media queries except that instead of selectively applying CSS depending on a media feature like a resolution, screen width or aspect ratio, it selectively applies CSS depending on whether a CSS feature is supported, similar to CSS.supports().
-
-For example, we could rewrite our previous example to use @supports:
-
-css
-Copy to Clipboard
+Hoặc, sử dụng `@supports` trong CSS:
+```css
 @supports (grid-template-columns: subgrid) {
   main {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(4, minmax(100px, auto));
   }
-
   .item {
     display: grid;
     grid-column: 2 / 7;
@@ -71,86 +48,53 @@ Copy to Clipboard
     grid-template-columns: subgrid;
     grid-template-rows: repeat(3, 80px);
   }
-
-  .subitem {
-    grid-column: 3 / 6;
-    grid-row: 1 / 3;
-  }
 }
-This at-rule block applies the CSS rule within only if the current browser supports the grid-template-columns: subgrid; declaration. For a condition with a value to work, you need to include a complete declaration (not just a property name) and NOT include the semicolon on the end.
+```
 
-@supports also has AND, OR, and NOT logic available — the other block applies the regular grid layout if the subgrid option is not available:
-
-css
-Copy to Clipboard
-@supports not (grid-template-columns: subgrid) {
-  /* rules in here */
-}
-This is more convenient than the previous example — we can do all of our feature detection in CSS, no JavaScript required, and we can handle all the logic in a single CSS file, cutting down on HTTP requests. For this reason it is the preferred method of determining browser support for CSS features.
-
-JavaScript
-We already saw an example of a JavaScript feature detection test earlier on. Generally, such tests are done via one of a few common patterns.
-
-Common patterns for detectable features include:
-
-Members of an object
-Check whether a particular method or property (typically an entry point into using the API or other feature you are detecting) exists in its parent Object.
-
-Our earlier example used this pattern to detect Geolocation support by testing the navigator object for a geolocation member:
-
-js
-Copy to Clipboard
+4. Kiểm tra tính năng trong JavaScript  
+- **Kiểm tra sự tồn tại của các phương thức trong đối tượng**: Kiểm tra xem một phương thức hoặc thuộc tính có tồn tại trong đối tượng hay không.
+Ví dụ (Geolocation):
+```js
 if ("geolocation" in navigator) {
-  // Access navigator.geolocation APIs
+  // Geolocation API được hỗ trợ
 }
-Properties of an element
-Create an element in memory using Document.createElement() and then check if a property exists on it.
+```
 
-This example shows a way of detecting Canvas API support:
-
-js
-Copy to Clipboard
+- **Kiểm tra tính năng của phần tử trong DOM**: Tạo phần tử bằng `Document.createElement()` và kiểm tra sự tồn tại của thuộc tính.
+Ví dụ (Canvas):
+```js
 function supports_canvas() {
   return !!document.createElement("canvas").getContext;
 }
 
 if (supports_canvas()) {
-  // Create and draw on canvas elements
+  // Vẽ trên canvas
 }
-Note: The double NOT in the above example (!!) is a way to force a return value to become a "proper" boolean value, rather than a Truthy/Falsy value that may skew the results.
+```
+Lưu ý: `!!` được sử dụng để đảm bảo giá trị trả về là boolean.
 
-Specific return values of a method on an element
-Create an element in memory using Document.createElement() and then check if a method exists on it. If it does, check what value it returns.
+- **Kiểm tra giá trị trả về của phương thức**: Kiểm tra xem phương thức trả về giá trị gì khi được gọi.
 
-Retention of assigned property value by an element
-Create an element in memory using Document.createElement(), set a property to a specific value, then check to see if the value is retained.
+- **Kiểm tra giá trị thuộc tính của phần tử**: Kiểm tra xem giá trị của thuộc tính được gán vào phần tử có được duy trì hay không.
 
-Bear in mind that some features are, however, known to be undetectable. In these cases, you'll need to use a different approach, such as using a polyfill.
+5. Media Queries trong JavaScript  
+`window.matchMedia()` cho phép bạn kiểm tra media query trong JavaScript. Bạn có thể áp dụng các chức năng khác nhau tùy theo kích thước màn hình.
 
-matchMedia
-We also wanted to mention the Window.matchMedia JavaScript feature at this point too. This is a property that allows you to run media query tests inside JavaScript. It looks like this:
-
-js
-Copy to Clipboard
+Ví dụ:
+```js
 if (window.matchMedia("(max-width: 480px)").matches) {
-  // run JavaScript in here.
+  // Thực hiện JavaScript cho màn hình nhỏ
 }
-As an example, our Snapshot demo makes use of it to selectively apply the Brick JavaScript library and use it to handle the UI layout, but only for the small screen layout (480px wide or less). We first use the media attribute to only apply the Brick CSS to the page if the page width is 480px or less:
+```
 
-html
-Copy to Clipboard
-<link
-  href="dist/brick.css"
-  rel="stylesheet"
-  media="all and (max-width: 480px)" />
-We then use matchMedia() in the JavaScript several times, to only run Brick navigation functions if we are on the small screen layout (in wider screen layouts, everything can be seen at once, so we don't need to navigate between different views).
+Ví dụ áp dụng thư viện JavaScript Brick cho màn hình nhỏ:
+```html
+<link href="dist/brick.css" rel="stylesheet" media="all and (max-width: 480px)" />
+```
 
-js
-Copy to Clipboard
+Sử dụng `matchMedia()` trong JavaScript để chỉ chạy các chức năng khi màn hình nhỏ:
+```js
 if (window.matchMedia("(max-width: 480px)").matches) {
   deck.shuffleTo(1);
 }
-Summary
-This article covered feature detection in a reasonable amount of detail, going through the main concepts and showing you how to implement your own feature detection tests.
-
-Next up, we'll start looking at automated testing.
+```
