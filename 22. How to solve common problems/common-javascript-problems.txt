@@ -1,156 +1,100 @@
-Solve common JavaScript problems
-The following links point to solutions to common problems you may encounter when writing JavaScript.
 
-Common beginner's mistakes
-Correct spelling and casing
-If your code doesn't work and/or the browser complains that something is undefined, check that you've spelt all your variable names, function names, etc. correctly.
+1. Những sai lầm phổ biến đối với người mới bắt đầu
+- Đúng chính tả và phân biệt chữ hoa/thường: Nếu mã của bạn không hoạt động và/hoặc trình duyệt báo lỗi "undefined", hãy kiểm tra xem bạn đã viết đúng tên biến, tên hàm chưa.
+  Ví dụ:
+  - Đúng: getElementsByTagName()
+  - Sai: getElementByTagName()
 
-Some common built-in browser functions that cause problems are:
+- Vị trí dấu chấm phẩy: Đảm bảo bạn không đặt dấu chấm phẩy sai.
+  Ví dụ:
+  - Đúng: `elem.style.color = 'red';`
+  - Sai: `elem.style.color = 'red;`
 
-Correct	Wrong
-getElementsByTagName()	getElementByTagName()
-getElementsByName()	getElementByName()
-getElementsByClassName()	getElementByClassName()
-getElementById()	getElementsById()
-Semicolon position
-You need to make sure you don't place any semicolons incorrectly. For example:
+2. Các vấn đề với hàm
+- Quên gọi hàm: Một lỗi phổ biến là khai báo hàm nhưng không gọi nó.
+  Ví dụ:
+  ```js
+  function myFunction() {
+    alert("This is my function.");
+  }
+  myFunction();  // Cần gọi hàm
+  ```
 
-Correct	Wrong
-elem.style.color = 'red';	elem.style.color = 'red;'
-Functions
-There are a number of things that can go wrong with functions.
+- Phạm vi của hàm (Function scope): Hàm có phạm vi riêng của nó — bạn không thể truy cập giá trị biến được đặt trong hàm từ bên ngoài trừ khi bạn khai báo biến toàn cục.
 
-One of the most common errors is to declare the function, but not call it anywhere. For example:
+- Mã sau `return`: Khi bạn trả về từ một hàm, JavaScript sẽ thoát khỏi hàm — không có mã nào sau `return` sẽ chạy.
 
-js
-Copy to Clipboard
-function myFunction() {
-  alert("This is my function.");
-}
-This code won't do anything unless you call it with the following statement:
+3. Cú pháp đối tượng và gán
+Khi gán một giá trị bình thường trong JavaScript, bạn dùng dấu "=":
+  ```js
+  const myNumber = 0;
+  ```
+Với đối tượng, cú pháp phải chính xác, bao gồm dấu ngoặc nhọn, tên thành viên phải được phân cách bằng dấu ":" và các thành viên phải được phân cách bằng dấu phẩy:
+  ```js
+  const myObject = {
+    name: "Chris",
+    age: 38,
+  };
+  ```
 
-js
-Copy to Clipboard
-myFunction();
-Function scope
-Remember that functions have their own scope — you can't access a variable value set inside a function from outside the function, unless you declared the variable globally (i.e., not inside any functions), or return the value from the function.
+4. Các định nghĩa cơ bản
+- JavaScript là gì?
+- Biến là gì?
+- Mảng là gì?
+- Vòng lặp là gì?
+- Hàm là gì?
+- Sự kiện là gì?
+- Đối tượng là gì?
+- JSON là gì?
+- API Web là gì?
+- DOM là gì?
 
-Running code after a return statement
-Remember also that when you return from a function, the JavaScript interpreter exits the function — no code after the return statement will run.
+5. Các trường hợp sử dụng cơ bản
+**Biến**
+- Cách khai báo biến: `let myVar;`
+- Cách gán giá trị cho biến: `myVar = 5;`
 
-In fact, some browsers (like Firefox) will give you an error message in the developer console if you have code after a return statement. Firefox gives you "unreachable code after return statement".
+**Số học**
+- Cách thực hiện phép toán cơ bản trong JavaScript.
+- So sánh giá trị: Ví dụ, kiểm tra giá trị nào lớn hơn hoặc so sánh sự bằng nhau.
 
-Object notation versus normal assignment
-When you assign something normally in JavaScript, you use a single equals sign, e.g.:
+**Chuỗi (Strings)**
+- Cách tạo một chuỗi trong JavaScript.
+- Cách nối chuỗi: `let fullName = "John" + " " + "Doe";`
 
-js
-Copy to Clipboard
-const myNumber = 0;
-With Objects, however, you need to take care to use the correct syntax. The object must be surrounded by curly braces, member names must be separated from their values using colons, and members must be separated by commas. For example:
+**Mảng (Arrays)**
+- Cách tạo mảng: `let fruits = ["apple", "banana", "cherry"];`
+- Cách truy cập và thay đổi giá trị trong mảng.
 
-js
-Copy to Clipboard
-const myObject = {
-  name: "Chris",
-  age: 38,
-};
-Basic definitions
-What is JavaScript?
-What is a variable?
-What are strings?
-What is an array?
-What is a loop?
-What is a function?
-What is an event?
-What is an object?
-What is JSON?
-What is a web API?
-What is the DOM?
-Basic use cases
-General
-How do you add JavaScript to your page?
-How do you add comments to JavaScript code?
-Variables
-How do you declare a variable?
-How do you initialize a variable with a value?
-How do you update a variable's value? (also see Assignment operators)
-What data types can values have in JavaScript?
-What does 'loosely typed' mean?
-Math
-What types of number do you have to deal with in web development?
-How do you do basic math in JavaScript?
-What is operator precedence, and how is it handled in JavaScript?
-How do you increment and decrement values in JavaScript?
-How do you compare values in JavaScript? (e.g., to see which one is bigger, or to see if one value is equal to another).
-Strings
-How do you create a string in JavaScript?
-Do you have to use single quotes or double quotes?
-How do you join strings together?
-Can you join strings and numbers together?
-How do you find the length of a string?
-How do you find what character is at a certain position in a string?
-How do you find and extract a specific substring from a string?
-How do you change the case of a string?
-How do you replace one specific substring with another?
-Arrays
-How do you create an array?
-How do you access and modify the items in an array? (this includes multidimensional arrays)
-How do you find the length of an array?
-How do you add items to an array?
-How do you remove items from an array?
-How do you split a string into array items, or join array items into a string?
-Debugging JavaScript
-What are the basic types of error?
-What are browser developer tools, and how do you access them?
-How do you log a value to the JavaScript console?
-How do you use breakpoints and other JavaScript debugging features?
-For more information on JavaScript debugging, see JavaScript debugging and error handling. Also, see Other common errors for a description of common errors.
+6. Gỡ lỗi JavaScript
+- Các loại lỗi cơ bản: Lỗi cú pháp, lỗi runtime.
+- Công cụ gỡ lỗi trình duyệt: Sử dụng DevTools trong trình duyệt để kiểm tra lỗi.
 
-Making decisions in code
-How do you execute different blocks of code, depending on a variable's value or other condition?
-How do you use if ...else statements?
-How do you nest one decision block inside another?
-How do you use AND, OR, and NOT operators in JavaScript?
-How do you conveniently handle a large number of choices for one condition?
-How do you use a ternary operator to make a quick choice between two options based on a true or false test?
-Looping/iteration
-How do you run the same bit of code over and over again?
-How do you exit a loop before the end if a certain condition is met?
-How do you skip to the next iteration of a loop if a certain condition is met?
-How do you use while and do...while loops?
-Intermediate use cases
-Functions
-How do you find functions in the browser?
-What is the difference between a function and a method?
-How do you create your own functions?
-How do you run (call, or invoke) a function?
-What is an anonymous function?
-How do you specify parameters (or arguments) when invoking a function?
-What is function scope?
-What are return values, and how do you use them?
-Objects
-How do you create an object?
-What is dot notation?
-What is bracket notation?
-How do you get and set the methods and properties of an object?
-What is this, in the context of an object?
-What is object-oriented programming?
-What are constructors and instances, and how do you create them?
-JSON
-How do you structure JSON data, and read it from JavaScript?
-How do you convert a JSON object to a text string, and back again?
-Events
-What are event handlers and how do you use them?
-What are inline event handlers?
-What does the addEventListener() function do, and how do you use it?
-What are event objects, and how do you use them?
-How do you prevent default event behavior?
-How do events fire on nested elements? (event propagation, also related — event bubbling and capturing)
-What is event delegation, and how does it work?
-Object-oriented JavaScript
-What are object prototypes?
-How do you add methods to the constructor?
-How do you create a new constructor that inherits its members from a parent constructor?
-When should you use inheritance in JavaScript?
-Web APIs
-How do you manipulate the DOM (e.g., adding or removing elements) using JavaScript?
+7. Quyết định trong mã
+- Câu lệnh if...else: Thực thi các khối mã khác nhau tùy thuộc vào điều kiện.
+- Câu lệnh `switch`: Lựa chọn giữa nhiều giá trị khác nhau.
+
+8. Vòng lặp/ Lặp lại
+- Câu lệnh `while` và `do...while`: Lặp lại mã cho đến khi một điều kiện trở thành đúng.
+
+9. Các trường hợp sử dụng trung cấp
+**Hàm**
+- Hàm ẩn danh: Một hàm không có tên.
+- Tham số của hàm: Cách khai báo và truyền tham số vào hàm.
+
+**Đối tượng (Objects)**
+- Cách tạo đối tượng: `let person = { name: "Chris", age: 38 };`
+- Dot notation và bracket notation: Cách truy cập và thay đổi thuộc tính của đối tượng.
+
+10. Sự kiện (Events)
+- Event handlers: Xử lý sự kiện trong JavaScript.
+- `addEventListener`: Cách sử dụng `addEventListener` để xử lý sự kiện.
+- Event delegation: Quản lý sự kiện hiệu quả khi có nhiều phần tử.
+
+11. JavaScript hướng đối tượng
+- Object prototypes: Làm việc với prototype trong JavaScript.
+- Kế thừa trong JavaScript: Cách tạo đối tượng con kế thừa từ đối tượng cha.
+
+12. JSON
+- Cấu trúc JSON: Cách sử dụng JSON để cấu trúc dữ liệu.
+- Chuyển đổi JSON: `JSON.stringify()` và `JSON.parse()` để chuyển đổi giữa JSON và đối tượng JavaScript.

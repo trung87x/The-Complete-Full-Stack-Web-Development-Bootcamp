@@ -1,65 +1,74 @@
-Solve common HTML problems
-The following links point to solutions to common everyday problems you'll need to solve with HTML.
+1. Cấu trúc cơ bản
+Áp dụng cơ bản nhất của HTML là cấu trúc tài liệu. Nếu bạn mới làm quen với HTML, bạn nên bắt đầu từ đây.
 
-Basic structure
-The most basic application of HTML is document structure. If you're new to HTML you should start with this.
+- Cách tạo một tài liệu HTML cơ bản
+- Cách chia một trang web thành các phần logic
+- Cách thiết lập cấu trúc hợp lý cho các tiêu đề và đoạn văn
 
-How to create a basic HTML document
-How to divide a webpage into logical sections
-How to set up a proper structure of headings and paragraphs
-Basic text-level semantics
-HTML specializes in providing semantic information for a document, so HTML answers many questions you might have about how to get your message across best in your document.
+2. Semantics cấp độ văn bản cơ bản
+HTML cung cấp thông tin ngữ nghĩa cho tài liệu, vì vậy HTML trả lời nhiều câu hỏi bạn có thể có về cách truyền tải thông điệp tốt nhất trong tài liệu của mình.
 
-How to create a list of items with HTML
-How to stress or emphasize content
-How to indicate that text is important
-How to display computer code with HTML
-How to annotate images and graphics
-How to mark abbreviations and make them understandable
-How to add quotations and citations to web pages
-How to define terms with HTML
-Hyperlinks
-One of the main reasons for HTML is making navigation easy with hyperlinks, which can be used in many different ways:
+- Cách tạo danh sách các mục với HTML
+- Cách nhấn mạnh hoặc làm nổi bật nội dung
+- Cách chỉ ra rằng văn bản quan trọng
+- Cách hiển thị mã máy tính với HTML
+- Cách chú thích hình ảnh và đồ họa
+- Cách đánh dấu các từ viết tắt và làm cho chúng dễ hiểu
+- Cách thêm trích dẫn và trích dẫn vào trang web
+- Cách định nghĩa các thuật ngữ với HTML
 
-How to create a link
-How to create a table of contents with HTML
-Images & multimedia
-How to add images to a webpage
-How to add video content to a webpage
-Scripting & styling
-HTML only sets up document structure. To solve presentation issues, use CSS, or use scripting to make your page interactive.
+3. Liên kết (Hyperlinks)
+Một trong những lý do chính của HTML là làm cho việc điều hướng dễ dàng với các liên kết, có thể sử dụng theo nhiều cách khác nhau:
 
-How to use CSS within a webpage
-How to use JavaScript within a webpage
-Embedded content
-How to embed a webpage within another webpage
-Uncommon or advanced problems
-Beyond the basics, HTML is very rich and offers advanced features for solving complex problems. These articles help you tackle the less common use cases you may face:
+- Cách tạo một liên kết
+- Cách tạo một mục lục với HTML
 
-Forms
-Forms are a complex HTML structure made to send data from a webpage to a web server. We encourage you to go over our full dedicated guide. Here is where you should start:
+4. Hình ảnh & đa phương tiện
+- Cách thêm hình ảnh vào một trang web
+- Cách thêm nội dung video vào một trang web
 
-How to create a simple Web form
-How to structure a Web form
-Tabular information
-Some information, called tabular data, needs to be organized into tables with columns and rows. It's one of the most complex HTML structures, and mastering it is not easy:
+5. Lập trình & kiểu dáng
+HTML chỉ thiết lập cấu trúc tài liệu. Để giải quyết các vấn đề về trình bày, bạn sử dụng CSS, hoặc sử dụng scripting để làm cho trang của bạn trở nên tương tác.
 
-How to create a data table
-How to make HTML tables accessible
-Data representation
-How to represent numeric and code values with HTML — see Superscript and Subscript, and Representing computer code.
-How to use data attributes
-Advanced text semantics
-How to take control of HTML line breaking
-How to mark changes (added and removed text) — see the <ins> and <del> elements.
-Advanced images & multimedia
-How to add a responsive image to a webpage
-How to add vector image to a webpage
-How to add a hit map on top of an image
-Internationalization
-HTML is not monolingual. It provides tools to handle common internationalization issues.
+- Cách sử dụng CSS trong một trang web
+- Cách sử dụng JavaScript trong một trang web
 
-How to add multiple languages into a single webpage
-How to display time and date with HTML
-Performance
-How to author fast-loading HTML pages
+6. Nội dung nhúng
+- Cách nhúng một trang web vào trang web khác
+
+7. Vấn đề không phổ biến hoặc nâng cao
+HTML rất phong phú và cung cấp các tính năng nâng cao để giải quyết các vấn đề phức tạp. Những bài viết này giúp bạn giải quyết những tình huống ít gặp hơn mà bạn có thể gặp phải.
+
+**Biểu mẫu (Forms)**
+Biểu mẫu là một cấu trúc HTML phức tạp được tạo ra để gửi dữ liệu từ một trang web đến một máy chủ web.
+
+- Cách tạo một biểu mẫu web đơn giản
+- Cách cấu trúc một biểu mẫu web
+
+**Thông tin dạng bảng (Tabular information)**
+Một số thông tin cần được tổ chức thành bảng với các cột và hàng. Đây là một trong những cấu trúc HTML phức tạp nhất và việc thành thạo nó không dễ dàng.
+
+- Cách tạo một bảng dữ liệu
+- Cách làm bảng HTML có thể truy cập
+
+**Biểu diễn dữ liệu (Data representation)**
+- Cách biểu diễn các giá trị số và mã với HTML — xem Superscript và Subscript, và biểu diễn mã máy tính.
+- Cách sử dụng các thuộc tính dữ liệu
+
+**Semantics văn bản nâng cao (Advanced text semantics)**
+- Cách kiểm soát việc ngắt dòng trong HTML
+- Cách đánh dấu các thay đổi (văn bản đã thêm và xóa) — xem các phần tử <ins> và <del>.
+
+**Hình ảnh & đa phương tiện nâng cao**
+- Cách thêm hình ảnh phản hồi vào một trang web
+- Cách thêm hình ảnh vector vào một trang web
+- Cách thêm bản đồ nóng (hit map) lên một hình ảnh
+
+**Quốc tế hóa (Internationalization)**
+HTML không chỉ dành cho một ngôn ngữ. Nó cung cấp các công cụ để xử lý các vấn đề quốc tế hóa phổ biến.
+
+- Cách thêm nhiều ngôn ngữ vào một trang web
+- Cách hiển thị thời gian và ngày tháng với HTML
+
+**Hiệu suất (Performance)**
+- Cách viết các trang HTML tải nhanh

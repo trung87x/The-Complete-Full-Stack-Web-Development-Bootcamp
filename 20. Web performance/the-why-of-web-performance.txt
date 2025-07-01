@@ -1,42 +1,40 @@
-The "why" of web performance
-Overview: Web performance
-Next
-Web performance is all about making websites fast, including making slow processes seem fast. This article provides an introduction into why web performance is important to site visitors and for your business goals.
+Tại sao hiệu suất web quan trọng?
 
-Prerequisites:	Basic software installed, and basic knowledge of client-side web technologies.
-Objective:	To gain basic familiarity of why web performance is important for good user experience.
-Web performance refers to how quickly site content loads and renders in a web browser, and how well it responds to user interaction. Bad performing sites are slow to display and slow to respond to input. Bad performing sites increase site abandonment. At its worst, bad performance causes content to be completely inaccessible. A good goal for web performance is for users to not notice performance. While an individual's perception of site performance is subjective, loading and rendering can be measured. Good performance may not be obvious to most site visitors, but most will immediately recognize a sluggish site. That is why we care.
+**Hiệu suất web** đề cập đến tốc độ tải trang web và khả năng tương tác của người dùng với trang web đó. Bài viết này giải thích tại sao hiệu suất web lại quan trọng đối với người dùng và mục tiêu kinh doanh của bạn.
 
-Why care about performance?
-Web performance — and its associated best practices—are vital for your website visitors to have a good experience. In a sense, web performance can be considered a subset of web accessibility. With performance as with accessibility, you consider what device a site visitor is using to access the site and the device connection speed.
+### **Hiệu suất web là gì?**
+Hiệu suất web là cách đo lường khách quan và trải nghiệm người dùng khi sử dụng một trang web hoặc ứng dụng. Bao gồm các yếu tố như:
 
-As an example, consider the loading experience of CNN.com, which at the time of this writing had over 400 HTTP requests with a file size of over 22.6MB.
+1. **Giảm thời gian tải chung**: Là thời gian để các tệp cần thiết để render (hiển thị) trang web tải về máy tính của người dùng. Các yếu tố như độ trễ mạng, kích thước tệp và số lượng yêu cầu HTTP đều ảnh hưởng đến điều này. Một chiến lược hiệu quả là làm cho tệp càng nhỏ càng tốt, giảm số lượng yêu cầu HTTP và sử dụng các kỹ thuật tải thông minh (như `preload`).
 
-Imagine loading this on a desktop computer connected to a fibre optic network. This would seem relatively fast, and the file size would be largely irrelevant.
-Imagine loading that same site using tethered mobile data on a nine-year-old iPad while commuting home on public transportation. The same site will be slow to load, possibly verging on unusable depending on cell coverage. You might give up before it finishes loading.
-Imagine loading that same site on a low-cost device in an area with limited coverage. The site will be very slow to load—if it loads at all—with blocking scripts possibly timing out, and adverse CPU impact potentially causing browser crashes if it does load.
-A 22.6 MB site could take up to 83 seconds to load on a 3G network, with DOMContentLoaded (meaning the site's base HTML structure) at 31.86 seconds.
+2. **Tạo trang web có thể sử dụng nhanh chóng**: Tải tài nguyên theo thứ tự hợp lý để người dùng có thể bắt đầu sử dụng trang web càng nhanh càng tốt. Các tài nguyên khác có thể tiếp tục tải trong nền trong khi người dùng thực hiện các tác vụ chính. Đây là thời gian từ khi trang bắt đầu tải đến khi người dùng có thể tương tác được gọi là "time to interactive".
 
-And it isn't just the time taken to download that is a major problem. In some regions, internet connections are billed per megabyte, making large downloads prohibitively expensive. Our example 22.6 MB CNN.com experience would cost a significant portion of a mobile data user's daily allowance or even lead to high charges in certain international roaming plans.
+3. **Mượt mà và khả năng tương tác**: Trang web có mượt mà không? Cuộn trang có mượt mà không? Các nút có thể nhấp được không? Các pop-up có mở nhanh không và hoạt ảnh có mượt mà không? Để tạo trang web mượt mà, bạn có thể sử dụng **CSS animations** thay vì JavaScript và tối ưu hóa các thay đổi DOM.
 
-Improve conversion rates
-Reducing the download and render time of a site improves conversion rates and user retention.
+4. **Hiệu suất cảm nhận**: Cảm nhận của người dùng về tốc độ của trang web có thể quan trọng hơn hiệu suất thực tế. Dù trang web có thể tải chậm, nếu bạn hiển thị một spinner tải hoặc cung cấp các gợi ý hữu ích trong thời gian chờ đợi, người dùng sẽ cảm thấy thời gian chờ đợi ngắn hơn. **Hiệu suất cảm nhận** là cảm nhận của người dùng, không phải là một chỉ số có thể đo lường trực tiếp.
 
-A conversion rate is the rate at which site visitors perform a measured or desired action. For example, this might be making a purchase, reading an article, or subscribing to a newsletter. The action being measured as the conversion rate depends on the website's business goals.
+5. **Đo lường hiệu suất**: Đo lường hiệu suất web bao gồm việc đo tốc độ thực tế và cảm nhận của ứng dụng, tối ưu hóa nơi có thể và theo dõi hiệu suất để đảm bảo rằng những gì bạn đã tối ưu vẫn tiếp tục được duy trì.
 
-Performance impacts conversion; improving web performance improves conversion. Site visitors expect a site to load in two seconds or less; sometimes even less on mobile (where it generally takes longer). These same site visitors begin abandoning slow sites at 3 seconds.
+### **Tại sao cần quan tâm đến hiệu suất web?**
+Hiệu suất web và các thực hành tốt liên quan là rất quan trọng đối với trải nghiệm của người dùng trên trang web. Trong một chừng mực nào đó, hiệu suất web có thể được xem là một phần của khả năng truy cập web (web accessibility). Bạn cần xem xét thiết bị của người dùng và tốc độ kết nối mạng của họ khi tối ưu hóa hiệu suất.
 
-The speed at which a site loads is one factor. If the site is slow to react to user interaction, or appears janky, this causes site visitors to lose interest and trust.
+#### Ví dụ:
+- **CNN.com** có hơn 400 yêu cầu HTTP với kích thước tệp hơn 22.6MB. Trên một máy tính để bàn kết nối với mạng quang học, trang web sẽ tải khá nhanh và kích thước tệp hầu như không quan trọng. Tuy nhiên, nếu bạn tải trang web này trên một thiết bị di động với dữ liệu di động có kết nối kém hoặc trên thiết bị giá rẻ, trang web sẽ rất chậm và có thể không tải được hoặc bị treo.
 
-Here's some real-world examples of performance improvements:
+#### Chi phí dữ liệu:
+- Trong một số khu vực, kết nối internet tính phí theo megabyte, điều này làm cho các tải tệp lớn trở nên rất đắt đỏ. Việc tải một trang web có kích thước lớn (22.6MB) có thể tiêu tốn một phần đáng kể dữ liệu của người dùng và có thể gây ra chi phí cao khi sử dụng dịch vụ roaming quốc tế.
 
-Tokopedia reduced render time from 14s to 2s for 3G connections and saw a 19% increase in visitors, 35% increase in total sessions, 7% increase in new users, 17% increase in active users and 16% increase in sessions per user.
-Rebuilding Pinterest pages for performance resulted in a 40% decrease in wait time, a 15% increase in SEO traffic and a 15% increase in conversion rate to signup.
-To build websites and applications people want to use; to attract and retain site visitors, you need to create an accessible site that provides a good user experience. Building websites requires HTML, CSS, and JavaScript, typically including binary file types such as images and video. The decisions you make and the tools you choose as you build your site can greatly affect the performance of the finished work.
+### **Cải thiện tỷ lệ chuyển đổi**
+Giảm thời gian tải và render của trang web sẽ cải thiện tỷ lệ chuyển đổi và giữ chân người dùng.
 
-Good performance is an asset. Bad performance is a liability. Site speed directly affects bounce rates, conversion, revenue, user satisfaction, and search engine ranking. Performant sites have been shown to increase visitor retention and user satisfaction. Slow content has been shown to lead to site abandonment, with some visitors leaving to never return. Reducing the amount of data that passes between the client and the server lowers the costs to all parties. Reducing HTML/CSS/JavaScript and media file sizes reduces both the time to load and a site's power consumption (see performance budgets).
+- **Tỷ lệ chuyển đổi** là tỷ lệ mà người dùng thực hiện hành động mong muốn, như mua hàng, đọc bài viết, hoặc đăng ký nhận bản tin.
+- Người dùng mong đợi trang web tải trong **2 giây** hoặc ít hơn, và bắt đầu bỏ trang nếu nó chậm hơn **3 giây**.
+- **Ví dụ thực tế**:
+   - **Tokopedia** đã giảm thời gian render từ 14 giây xuống 2 giây cho các kết nối 3G và thấy tỷ lệ người truy cập tăng **19%**, tổng số phiên truy cập tăng **35%**, người dùng mới tăng **7%**, người dùng hoạt động tăng **17%**, và số phiên mỗi người dùng tăng **16%**.
+   - **Pinterest** đã xây dựng lại các trang để tối ưu hiệu suất và giảm thời gian chờ đợi **40%**, tăng **15%** lượng truy cập SEO và tăng **15%** tỷ lệ chuyển đổi đăng ký.
 
-Tracking performance is important. Multiple factors, including network speed and device capabilities affect performance. There is no single performance metric; and differing business objectives may mean different metrics are more relevant to the goals of the site or the organization that it supports. How the performance of your site is perceived is user experience!
+### **Tại sao hiệu suất web lại quan trọng đối với doanh nghiệp?**
+Hiệu suất web không chỉ ảnh hưởng đến tốc độ tải trang mà còn liên quan đến các chỉ số quan trọng như tỷ lệ thoát, tỷ lệ chuyển đổi, doanh thu, sự hài lòng của người dùng và thứ hạng trên công cụ tìm kiếm. Các trang web có hiệu suất tốt sẽ tăng tỷ lệ giữ chân người dùng và sự hài lòng của họ, trong khi trang web chậm có thể dẫn đến việc người dùng bỏ đi và không quay lại.
 
-Conclusion
-Web performance is important for accessibility and also for other website metrics that serve the goals of an organization or business. Good or bad website performance correlates powerfully to user experience, as well as the overall effectiveness of most sites. This is why you should care about web performance.
+### **Kết luận**
+Hiệu suất web rất quan trọng đối với khả năng truy cập của trang web và các chỉ số khác phục vụ mục tiêu kinh doanh. Hiệu suất web tốt hay xấu có mối quan hệ mạnh mẽ với trải nghiệm người dùng và hiệu quả tổng thể của hầu hết các trang web. Đây chính là lý do tại sao bạn cần quan tâm đến hiệu suất web.
